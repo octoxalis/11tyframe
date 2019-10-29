@@ -101,7 +101,7 @@ probably replacing the `index.md` and `install.md` files in the `matter/pages` d
 {% end_anchor %}
 
 
-If you do you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} commenting system: [utteranc.es]{{U_o.OUTLINK_s}}. All you have to do is to follow utterances site [instructions]{{U_o.OUTLINK_s}}.
+If you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} commenting system: [utteranc.es]{{U_o.OUTLINK_s}}. All you have to do is to follow utterances site [instructions]{{U_o.OUTLINK_s}}.
 
 
 If you don't want to have comments on any page, just add a property `no_comments` in its frontmatter section: here is what this `install` page source does, just _commenting out_ (sic) the `no_comments` property.
