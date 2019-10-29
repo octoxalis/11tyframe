@@ -24,8 +24,8 @@ You are just a few lines away from your blog.{ data--="page_intro" }
 {% end_anchor %}
 
 
-Your first action to create a {{A_o.NAME_s}} site is to fork {{A_o.ID_s}} repository inside the directory on your local computer where you want to develop your new site, then
-create a Github repository with the same 
+Your first action to create a {{A_o.NAME_s}} site is to fork {{A_o.ID_s}} [repository] inside the directory on your local computer where you want to develop your new site, then
+create a Github repository with the same directory name
 {% _short_note %}
 for instance, the Github repository for {{A_o.NAME_s}} is {{A_o.ID_s}}.
 {% end_short_note %}
@@ -158,6 +158,7 @@ tags:      [],
 
 [comment]: # (======== Links ========)
 
+[repository]: https://github.com/octoxalis/11tyframe
 [11tyTips]: https://11tytips.netlify.com
 [utteranc.es]: https://github.com/utterance/utterances
 [instructions]: https://utteranc.es
