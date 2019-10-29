@@ -39,16 +39,21 @@ it is [zero-config]{{U_o.OUTLINK_s}} out of the box!
 
 {{A_o.NAME_s}} design and styles have been carefully developed to give you a nice and simple presentation while offering advanced capabilities:
 + responsive layout with *fluid typography*;
++ full Markdown content, styling, linking, etc.;
 + smart inline notes;
-+ full Markdown content, styling, linking, code blocks, etc.;
++ highlighted code blocks powered by Lea Verou [Prism];
 + Atom RSS feed;
 + sitemap for search engines;
-+ smart commenting system using your own Github repository issues.
++ smart [utteranc.es] commenting system using your own Github repository issues.
 
 { data--="ulist" }
 
 
-This page and the **[install]** page give you the instructions to customize your new blog and are supposed to be replaced as soon as you have fresh matter for your blog:
+This page and the **[install]** page give you the instructions to customize your new blog and are supposed to be replaced as soon as you have fresh matter for your blog
+{% _short_note %}
+an easy way to customize your site styles will be added in a near future...
+{% end_short_note %}
+.
 
 
 **That's all Folks!**
@@ -61,4 +66,5 @@ This page and the **[install]** page give you the instructions to customize your
 [zero-config]: https://www.11ty.io/docs/resources/#zero-config
 [utteranc.es]: https://github.com/utterance/utterances
 [Node.js]:     https://nodejs.org
+[Prism]:       https://prismjs.com
 [formula]:     https://www.smashingmagazine.com/2016/05/fluid-typography/#comments-fluid-typography

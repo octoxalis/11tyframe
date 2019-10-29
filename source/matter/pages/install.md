@@ -15,9 +15,26 @@
 }
 ---
 [comment]: # (======== Post ========)
-# Installing 11ty Frame blog
+# Installing {{A_o.NAME_s}} blog
 
 You are just a few lines away from your blog.{ data--="page_intro" }
+
+{% _anchor %}
+## Let's create a Github repository
+{% end_anchor %}
+
+
+Your first action to create a {{A_o.NAME_s}} site is to fork {{A_o.ID_s}} repository inside the directory on your local computer where you want to develop your new site, then
+create a Github repository with the same 
+{% _short_note %}
+for instance, the Github repository for {{A_o.NAME_s}} is {{A_o.ID_s}}.
+{% end_short_note %}
+, then create a new site at Netlify or at your usual CDN
+{% _short_note %}
+for Netlify follow these Netlify [page]{{U_o.OUTLINK_s}} instructions.
+{% end_short_note %}
+and give it the name of your Github repository.
+
 
 {% _anchor %}
 ## Let's have a post!
@@ -46,7 +63,7 @@ ID_s         : '11tyframe',                       //: Your github repository
 NAME_s       : '11ty Frame',                      //: Your site name
 URL_s        : `https://11tyframe.netlify.com/`,  //: Your CDN site address
 LOCAL_s      : 'http://127.0.0.1:5500/',          //: Your local address and port for development
-COLLECTION_s : 'post',                            //: The **Eleventy tag** for your posts collection
+COLLECTION_s : 'post',                            //: The Eleventy tag for your posts collection
 
 description_o:                                    //: descriptions for SEO
 {
@@ -59,7 +76,7 @@ description_o:                                    //: descriptions for SEO
 
 Once you have completed this step, you just have to rebuilt your site with this command:
 {% _short_note %}
-from your {{A_o.NAME_s}} `source` directory.
+from your {{A_o.ID_s}} `source` directory.
 {% end_short_note %}
 
 {% _code_block %}
@@ -84,10 +101,10 @@ probably replacing the `index.md` and `install.md` files in the `matter/pages` d
 {% end_anchor %}
 
 
-If you do you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} commenting system: [utteranc.es]{{U_o.OUTLINK_s}}. All you have to do is to follow the [instructions]{{U_o.OUTLINK_s}}.
+If you do you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} commenting system: [utteranc.es]{{U_o.OUTLINK_s}}. All you have to do is to follow utterances site [instructions]{{U_o.OUTLINK_s}}.
 
 
-If you don't want to have comments on any page, just add a property `no_comments` in its section: here is what this `install` page source does, just _commenting out_ (sic) the `no_comments` property.
+If you don't want to have comments on any page, just add a property `no_comments` in its frontmatter section: here is what this `install` page source does, just _commenting out_ (sic) the `no_comments` property.
 
 
 {% _code_block %}
@@ -115,8 +132,33 @@ If you don't want to have comments on any page, just add a property `no_comments
 {% end_code_block %}
 
 
+{% _anchor %}
+## Removing {{A_o.NAME_s}} demo pages 
+{% end_anchor %}
+
+
+Of course, you can remove {{A_o.NAME_s}} demo pages from your personal site
+{% _short_note %}
+you should first have another `index` and a `post` tagged page of your own, otherwise you will get an error when building your site.
+{% end_short_note %}
+, but if you want to keep them in your source directory
+{% _short_note %}
+for instance to  have a handy reference
+{% end_short_note %}
+, without building them in your site, you just have to change two lines in their frontmatter section, replacing ex.1 code by ex.2 code:
+
+permalink: `install.html`,<br>
+tags:      [ `post` ],
+{data--="example"}
+
+permalink: false,<br>
+tags:      [],
+{data--="example"}
+
+
 [comment]: # (======== Links ========)
 
 [11tyTips]: https://11tytips.netlify.com
 [utteranc.es]: https://github.com/utterance/utterances
 [instructions]: https://utteranc.es
+[page]: https://www.netlify.com
