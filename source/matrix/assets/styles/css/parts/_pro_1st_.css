@@ -1,0 +1,85 @@
+.utterances
+  {background:var(--c_extern)}
+
+[data--=posts_menu],
+[data--=header]
+  {background:var(--c_back_op)}
+
+[data--=posts_menu] h4,
+[data--=posts_item],
+[data--=article],
+[data--=section]
+  {background:var(--c_back_hi)}
+
+.note_open
+  {background:var(--c_back_lo)}
+
+.toolbar-item > button:hover,
+[data--=posts_item] span,
+[data--=header_menu]:hover,
+[data--=code_ref],
+[data--=example]
+  {background:var(--c_decor_hi)}
+
+[data--=important]::before
+  {color:var(--c_decor)}
+
+[data--=header],
+[data--=section],
+[data--=posts_menu],
+[data--=posts_item],
+[data--=article],
+.note_open
+  {color:var(--c_prim_lo)}
+
+[data--=posts_menu]
+  {position:absolute}
+
+[data--=header]
+  {position:sticky}
+
+.utterances-frame,
+[data--=inline_note],
+[data--=ulist] > li::before,
+[data--=important]::before
+  {position:relative}
+
+[data--="header"]
+  {z-index: 2}
+
+[data--="menu_frame"],
+[data--="posts_menu"]
+  {z-index: var(--MENU_SHOW)}  /* 0 : 1 */
+
+[data--="menu_frame"],
+[data--="posts_menu"]
+  {opacity: var(--MENU_SHOW)}  /* 0 : 1 */
+
+.utterances,
+p > code,
+code[class*="language-"],
+pre[class*="language-"],
+[data--="note_content"] code,    /* code inside inline_note*/
+[data--="posts_menu"],
+[data--="page_intro"],
+[data--="code_ref"],
+[data--="example"]
+  {max-width:var(--MAX_WIDTH);}
+
+p > code,
+[data--="note_content"],
+[data--="note_content"] u,
+[data--="note_content"] strong,
+[data--="note_content"] cite,
+[data--="note_content"] code
+  {display:inline-block}
+
+.note_open,
+pre > code,
+[data--=example]::before
+  {display:block}
+
+[data--="inline_note"],
+[data--="posts_order"],
+[data--="header_menu"]:hover
+  {cursor:pointer}

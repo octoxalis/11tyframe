@@ -1,0 +1,14 @@
+{
+  "name":"11tyframe",
+  "start_url": "https://11tyframe.netlify.com",
+  "short_name":"11tyframe",
+  "description": "Useful posts for Eleventy static site generator users",
+  "icons":
+  [
+    {"src":"/assets/media/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+    {"src":"/assets/media/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
+  ],
+  "theme_color":"#041D4E",
+  "background_color":"#DDE8FD",
+  "display":"standalone"
+}

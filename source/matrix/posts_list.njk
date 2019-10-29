@@ -1,0 +1,27 @@
+---js
+{
+  rank__s: at_n => `#${('' + at_n).padStart( 3, '0' )}`
+}
+---
+{% include "parts/_template_start_.njk" %}{# ante process #}
+
+{%- set _template_s %}
+<menu data--="posts_menu">
+  <h3><a href="{{ U_o.url_s }}">Home</a></h3>
+  {% if U_o.GIT_s %}{{ C_o.h4_a__s( U_o.GIT_s, 'Github' ) }}{% endif %}
+  {% if U_o.TWI_s %}{{ C_o.h4_a__s( U_o.TWI_s, 'Twitter' ) }}{% endif %}
+  {% if U_o.RSS_s %}{{ C_o.h4_a__s( U_o.RSS_s, 'RSS' ) }}{% endif %}
+  <h2 data--="posts_order">All posts</h2>
+  <ol data--="posts_list">
+{% for _post_o in collections[A_o.COLLECTION_s] %}
+    <li data--="posts_item">
+      <span>{{ rank__s(loop.index) }}</span>
+      <span><a href="{{ _post_o.url | url }}">{{ _post_o.data.title_s }}</a></span>
+      <span>{{ _post_o.data.subtitle_s }}</span>
+    </li>
+{% endfor %}
+  </ol>
+</menu>
+{% endset -%}
+
+{% include "parts/_template_end_.njk" %}{# post process #}
