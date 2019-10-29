@@ -9,3 +9,5 @@ Using the full power of
 + [Markdown](https://daringfireball.net/projects/markdown/)
 
 in a carefuly designed blog site.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45be257f-c636-4cd9-975b-ad608262f3ff/deploy-status)](https://app.netlify.com/sites/11tyframe/deploys)
