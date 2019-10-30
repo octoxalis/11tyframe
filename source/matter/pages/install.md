@@ -29,11 +29,33 @@ create a Github repository with the same directory name
 {% _short_note %}
 for instance, the Github repository for {{A_o.NAME_s}} is {{A_o.ID_s}}.
 {% end_short_note %}
-, then create a new site at Netlify or at your usual CDN
-{% _short_note %}
-for Netlify follow these Netlify [page]{{U_o.OUTLINK_s}} instructions.
-{% end_short_note %}
-and give it the name of your Github repository.
+.
+
+
+Install [Eleventy] and the required Node packages locally, as they appear in your `package.json` file
+
+{% _code_block %}
+    title_s: 'package.json',
+    lang_s: 'json',
+[//]:#(_code_block)
+{% raw %}
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "clean-css": "^4.2.1",
+    "uglify-es": "^3.3.9",
+    "debug": "^4.1.1",
+    "fs-extra": "^8.1.0",
+    "klaw-sync": "^6.0.0",
+    "markdown-it": "^9.1.0",
+    "markdown-it-attrs": "^3.0.1",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-include": "^1.1.0",
+    "markdown-it-link-attributes": "^2.1.0",
+    "npx": "^10.2.0",
+    "nunjucks": "^3.2.0"
+  },
+{% endraw %}
+{% end_code_block %}
 
 
 {% _anchor %}
@@ -157,8 +179,23 @@ tags:      [],
 {data--="example"}
 
 
+{% _anchor %}
+## Configure your CDN
+{% end_anchor %}
+
+
+Now you can create a new site at Netlify or at your usual CDN
+{% _short_note %}
+for Netlify follow Netlify [page]{{U_o.OUTLINK_s}} instructions.
+{% end_short_note %}
+and give it the name of your Github repository.
+
+**There you are!** You're both an Eleventy and {{A_o.NAME_s}} user...
+
+
 [comment]: # (======== Links ========)
 
+[Eleventy]: https://github.com/11ty/eleventy/
 [repository]: https://github.com/octoxalis/11tyframe
 [11tyTips]: https://11tytips.netlify.com
 [utteranc.es]: https://github.com/utterance/utterances
