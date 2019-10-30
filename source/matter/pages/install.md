@@ -79,6 +79,7 @@ Once you have completed this step, you just have to rebuilt your site with this 
 from your {{A_o.ID_s}} `source` directory.
 {% end_short_note %}
 
+
 {% _code_block %}
     title_s: 'shell command',
     lang_s: 'shell',
@@ -147,11 +148,11 @@ for instance to  have a handy reference
 {% end_short_note %}
 , without building them in your site, you just have to change two lines in their frontmatter section, replacing ex.1 code by ex.2 code:
 
-permalink: `install.html`,<br>
+permalink: `install.html`,<br/>
 tags:      [ `post` ],
 {data--="example"}
 
-permalink: false,<br>
+permalink: false,<br/>
 tags:      [],
 {data--="example"}
 

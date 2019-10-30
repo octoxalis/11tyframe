@@ -25,7 +25,7 @@
     <link href="{{ _absolutePostUrl_s }}"/>
     <updated>{{ _post_o.date | feed_date }}</updated>
     <id>{{ _absolutePostUrl_s }}</id>
-    <content type="html">{{ _post_o.templateContent | rss_feed }}</content>
+    <content type="html">{{ _post_o.templateContent | feed_content }}</content>
   </entry>
 {%- endfor %}
 </feed>
