@@ -14,7 +14,7 @@
 }
 ---
 [comment]: # (======== Post ========)
-# Welcome to {{A_o.NAME_s}} clone...
+# Welcome to {{A_o.NAME_s}}
 
 A site powered by [Eleventy]{{U_o.OUTLINK_s}} static site generator.{ data--="page_intro" }
 
