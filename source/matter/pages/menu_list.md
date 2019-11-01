@@ -1,8 +1,8 @@
 ---js
 {
   date:      `2019-11-01`,
-  layout:    `posts_list.njk`,
-  permalink: 'posts_list.html',
+  layout:    `menu_list.njk`,
+  permalink: 'menu_list.html',
   tags:      [ `notag` ],
   eleventyExcludeFromCollections: true,
 

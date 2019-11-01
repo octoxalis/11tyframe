@@ -16,8 +16,8 @@ module.exports =
 
   description_o:
   {
-    DESCRIPT_s: CUST_o.DESCRIPT_s,
-    GLOBAL_s:   CUST_o.GLOBAL_s,
+    DESCRIPT_s: CUST_o.description_o.DESCRIPT_s,
+    GLOBAL_s:   CUST_o.description_o.GLOBAL_s,
   },
 
 }

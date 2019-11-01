@@ -56,7 +56,7 @@
 │   │           │   ├── _full_width_.css
 │   │           │   ├── _html_.css
 │   │           │   ├── _note_.css
-│   │           │   ├── _posts_list_.css
+│   │           │   ├── _menu_list_.css
 │   │           │   ├── _prism_theme_.css
 │   │           │   ├── _properties_.css
 │   │           │   ├── _rootvar_.css
@@ -83,7 +83,7 @@
 │   │   └── _template_start_.njk
 │   ├── feed.njk
 │   ├── frame.njk
-│   ├── posts_list.njk
+│   ├── menu_list.njk
 │   └── sitemap.njk
 └── matter
     ├── assets
@@ -106,5 +106,5 @@
         ├── feed.md
         ├── index.md
         ├── post_001.md
-        ├── posts_list.md
+        ├── menu_list.md
         └── sitemap.md
