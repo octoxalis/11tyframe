@@ -41,7 +41,7 @@ it is [zero-config]{{U_o.OUTLINK_s}} out of the box!
 + responsive layout with *fluid typography*;
 + full Markdown content, styling, linking, etc.;
 + smart inline notes;
-+ highlighted code blocks powered by Lea Verou [Prism];
++ highlighted code blocks powered by Lea Verou's [Prism];
 + Atom RSS feed;
 + sitemap for search engines;
 + smart [utteranc.es] commenting system using your own Github repository issues.
