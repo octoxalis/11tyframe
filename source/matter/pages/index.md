@@ -62,7 +62,7 @@ an easy way to customize your site styles will be added in a near future...
 
 [comment]: # (======== Links ========)
 
-[install]:     ./install.html
+[install]:     ./posts/install.html
 [Eleventy]:    https://11ty.io
 [zero-config]: https://www.11ty.io/docs/resources/#zero-config
 [utteranc.es]: https://github.com/utterance/utterances
