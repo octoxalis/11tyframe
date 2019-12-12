@@ -28,6 +28,7 @@ const install__v = install_o =>
   install_o.waitUntil( caches.open( CACHE_s )
     .then( cache_o => cache_o.addAll( URL_a  )
     .then( self.skipWaiting() ) ) )
+    .catch( error_o => console.log( `[Installation] ${error_o}` ) )
 }
 
 /**
@@ -39,7 +40,8 @@ const activate__v = activate_o =>
     .then( entry_a => entry_a.filter( entry_s => entry_s !== CACHE_s ) )
     .then( remove_a => Promise.all( remove_a.map( remove_s => caches.delete( remove_s ) ) ) )
     .then( () => self.clients.claim() )
-  )
+    .catch( error_o => console.log( `[Activation] ${error_o}` ) )
+    )
 }
 
 /**
