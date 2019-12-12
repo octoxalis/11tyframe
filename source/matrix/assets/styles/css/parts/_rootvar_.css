@@ -13,4 +13,5 @@
 
   --LINE_WIDTH: 60ch;    /* c. 70 characters / line */
   --MAX_WIDTH: calc( var(--LINE_WIDTH) * 2 );
+
 }

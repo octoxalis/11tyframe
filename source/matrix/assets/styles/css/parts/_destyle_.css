@@ -6,9 +6,9 @@
  */
 
 hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
   clear: both;
 }
 
@@ -18,13 +18,13 @@ hr {
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/*
+
 abbr[title] {
-  border-bottom: none; 
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
-*/
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -49,11 +49,11 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-/*
+
 sub {
   bottom: -0.25em;
 }
-*/
+
 sup {
   top: -0.5em;
 }
@@ -90,13 +90,13 @@ textarea {
 }
 
 [type='checkbox'] {
-  
+  /* 1 */
   -webkit-appearance: checkbox;
   appearance: checkbox;
 }
 
 [type='radio'] {
-  
+  /* 1 */
   -webkit-appearance: radio;
   appearance: radio;
 }
@@ -157,9 +157,9 @@ fieldset
  */
 
 legend {
-  display: table; 
-  max-width: 100%; 
-  white-space: normal; 
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -189,7 +189,7 @@ textarea
  */
 
 [type='search']
-{ outline-offset: -2px; }
+{ outline-offset: -2px; }/* 1 */
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
@@ -204,7 +204,7 @@ textarea
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; 
+  -webkit-appearance: button; /* 1 */
 }
 
 /**

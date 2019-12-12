@@ -72,13 +72,13 @@
 
 [data--="example"]
 {
-  counter-increment: examples;
+  counter-increment: var(--EXAMPLES);
   padding-left: var(--PAD_2);
   color: hsla( 180, 10%, 10%, 1 );
 }
 [data--="example"]::before
 {
-  content: 'example #' counter(examples);
+  content: 'example #' counter( var(--EXAMPLES) );
   margin-bottom: var(--PAD_2);
   padding-left: var(--PAD_1);
   border-bottom: 1px solid var(--c_decor_lo);

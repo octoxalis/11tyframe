@@ -5,7 +5,9 @@
 
 [data--="menu"]
 {
-  /*width: calc( 100% - ( var(--PAD_W) * 2vw ) );*/
+  --INLINE_NOTES: menu_notes;
+
+  counter-reset: var(--INLINE_NOTES);
   padding-top: var(--PAD_8);
   transform: scaleY( var(--MENU_SHOW) );
   transition: all 0.25s ease-in-out;
@@ -30,5 +32,5 @@
   margin-left: var(--PAD_2);
   padding: var(--PAD_1);
   font-style: oblique;
-  color: var(--c_text);
+  color: hsla( 180, 10%, 10%, 1 );
 }

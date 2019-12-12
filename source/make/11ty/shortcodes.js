@@ -23,7 +23,7 @@ const CODES_o =
 <h5>${content_o.title_s}</h5>
 <h6><a href="https://prismjs.com" target="_blank" rel="noreferrer noopener" title="Highlighting provided by Prism.js">Prism</a></h6>
 </hgroup>
-<pre><code class="language-${content_o.lang_s} line-numbers">${content_a1_s}</code></pre>`
+<pre><code class="language-${content_o.lang_s}">${content_a1_s}</code></pre>`
   },
 
   replace_all__s: content_s =>

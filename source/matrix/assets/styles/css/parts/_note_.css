@@ -7,7 +7,10 @@
 
 [data--="article"]
 {
-  counter-reset: inline_notes examples;
+  --INLINE_NOTES: article_notes;
+  --EXAMPLES: examples;
+
+  counter-reset: var(--INLINE_NOTES) var(--EXAMPLES);
 }
 
 [data--="inline_note"]
@@ -32,7 +35,7 @@
 
 [data--="inline_note"] > sup
 {
-  counter-increment: inline_notes;
+  counter-increment: var(--INLINE_NOTES);
   top: -0.6rem;
   margin-right: .5rem;
   padding: 0 var(--PAD_2);
@@ -42,7 +45,7 @@
 }
 [data--="inline_note"] > sup::after
 {
-  content: counter( inline_notes );
+  content: counter( var(--INLINE_NOTES) );
 }
 
 [data--="note_content"] u    /* horizontal line */

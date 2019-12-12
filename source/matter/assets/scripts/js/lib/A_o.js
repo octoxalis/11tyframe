@@ -13,6 +13,7 @@ module.exports =
   URL_s:        CUST_o.URL_s,
   LOCAL_s:      CUST_o.LOCAL_s,
   COLLECTION_s: CUST_o.COLLECTION_s,
+  LANGUAGE_s:   CUST_o.LANGUAGE_s,
 
   description_o:
   {

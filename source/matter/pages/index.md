@@ -44,7 +44,8 @@ it is [zero-config]{{U_o.OUTLINK_s}} out of the box!
 + highlighted code blocks powered by Lea Verou's [Prism];
 + Atom RSS feed;
 + sitemap for search engines;
-+ smart [utteranc.es] commenting system using your own Github repository issues.
++ smart [utteranc.es] commenting system using your own Github repository issues;
++ service worker for offline visiting.
 
 { data--="ulist" }
 

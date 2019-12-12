@@ -2,12 +2,13 @@
 {
   date:      `2019-11-01`,
   layout:    `frame.njk`,
-  permalink: `install.html`,
+  permalink: `posts/install.html`,
   tags:      [ `post` ],
 
   eleventyExcludeFromCollections: false,
   no_comments: true,
 
+  menu_n:     1,
   title_s:    `Install 11ty Frame`,
   subtitle_s: `How to install your 11ty Frame blog`,
   abstract_s: `Follow these instructions`,
@@ -24,7 +25,11 @@ You are just a few lines away from your blog.{ data--="page_intro" }
 {% end_anchor %}
 
 
-Your first action to create a {{A_o.NAME_s}} site is to fork {{A_o.ID_s}} [repository] inside the directory on your local computer where you want to develop your new site, then
+Your first action to create a {{A_o.NAME_s}} site is to fork {{A_o.ID_s}} [repository] inside the directory where you want to develop your new site
+{% _short_note %}
+ on your local computer
+{% end_short_note %}
+, then
 create a Github repository with the same directory name
 {% _short_note %}
 for instance, the Github repository for {{A_o.NAME_s}} is {{A_o.ID_s}}.
