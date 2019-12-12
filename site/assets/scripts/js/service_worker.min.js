@@ -37,7 +37,7 @@ const activate__v = activate_o =>
 {
   activate_o.waitUntil( caches.keys()
     .then( entry_a => entry_a.filter( entry_s => entry_s !== CACHE_s ) )
-    //.then( remove_a => Promise.all( remove_a.map( remove_s => caches.delete( remove_s ) ) ) )
+    .then( remove_a => Promise.all( remove_a.map( remove_s => caches.delete( remove_s ) ) ) )
     .then( () => self.clients.claim() )
     )
 }
