@@ -18,6 +18,9 @@ const EXPORT_a =    // default exported data
   'author_s',
 ]
 
+const MD_DIR_s = './matter/pages/'    //: all Mardown files
+const DEPTH_n  = 0                    //: ...are located at the root level of MD_DIR_s
+
 const OPEN_s = '[='   //: substitute__s function delimiter
 const CLOSE_s = '=]'  //: idem
 
@@ -25,8 +28,9 @@ module.exports =
 {
   siteUrl__s: ( file_s, dir_s='posts/' ) => `[${file_s.replace('_', ' ')}]: ${U_o.url_s}${dir_s}${file_s}.html`,
 
-  tagEscape__s: content_s => content_s.replace( /</g, '&lt;' ).replace( />/g, '&gt;' )
-  ,
+  tagEscape__s: content_s => content_s.replace( /</g, '&lt;' ).replace( />/g, '&gt;' ),
+
+  files__a: () => require( 'klaw-sync' )( MD_DIR_s, { nodir: true, depthLimit: DEPTH_n } ),
 
   data__o: ( collection_a, permalink_s ) =>
   {

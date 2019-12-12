@@ -1,6 +1,7 @@
-const U_o = require( '../../matter/assets/scripts/js/lib/U_o.js' )
-const C_o = require( '../../matter/assets/scripts/js/lib/C_o.js' )
-const A_o = require( '../../matter/assets/scripts/js/lib/A_o.js' )
+const path_s = '../../matter/assets/scripts/js/lib/'
+const U_o = require( `${path_s}U_o.js` )
+const C_o = require( `${path_s}C_o.js` )
+const A_o = require( `${path_s}A_o.js` )
 
 const order__s = order_n => `${('' + order_n).padStart( 4, '.' )}`
 

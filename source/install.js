@@ -12,7 +12,7 @@ module.exports =
   LOCAL_s:      'http://127.0.0.1:5500/',          //: local address and port for development
   COLLECTION_s: 'post',                            //: Eleventy tag for posts collection
   LANGUAGE_s:   'en',                              //: Site language
-  
+
   description_o:                                   //: descriptions for SEO
   {
     DESCRIPT_s: '11ty Frame blog',

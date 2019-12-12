@@ -1,19 +1,18 @@
-const A_o = require( '../../matter/assets/scripts/js/lib/A_o.js' )
+const path_s = '../../matter/assets/scripts/js/lib/'
+const A_o = require( `${path_s}A_o.js` )
+const F_o = require( `${path_s}F_o.js` )
 
-const MD_DIR_s = './matter/pages/'    //: all Mardown files
-const DEPTH_n  = 0                    //: ...are located at the root level of MD_DIR_s
-const files_a  = require( 'klaw-sync' )( MD_DIR_s, { nodir: true, depthLimit: DEPTH_n } )
-var count_n    = files_a ? files_a.length : 0
-var at_n       = 0
-var menu_a     = []
+const files_a = F_o.files__a() //require( 'klaw-sync' )( MD_DIR_s, { nodir: true, depthLimit: DEPTH_n } )
+var count_n   = files_a ? files_a.length : 0
+var at_n      = 0
+var menu_a    = []
 
-const buildStart__s = ( input_s, data_o ) =>
+const menuRead__v = data_o =>
 {
-  console.log( `${files_a.length} Markdown files to process` )
-  //...?? create worker_thread
+  if ( data_o.tags && data_o.tags.includes( A_o.COLLECTION_s ) ) menu_a.push( data_o )
 }
 
-const buildEnd__s = ( input_s, data_o ) =>
+const menuWrite__v = () =>
 {
   //console.log( `${files_a.length} Markdown files processed` )
   console.log( `Writing ../site/menu.html from template_process.js` )
@@ -21,13 +20,23 @@ const buildEnd__s = ( input_s, data_o ) =>
     .outputFile( '../site/menu.html',
       require( './menu.js' )( menu_a ),
       err_s => console.log ( err_s || 'Build success!' ) )
-  //...?? delete worker_thread
+}
+
+const buildStart__s = ( input_s, data_o ) =>
+{
+  console.log( `${files_a.length} Markdown files to process` )
+}
+
+const buildEnd__s = ( input_s, data_o ) =>
+{
+  menuWrite__v()
+  //... what else?
 }
 
 const templateStart__s = ( input_s, data_o ) =>
 {
   let start_s = input_s
-  if ( data_o.tags && data_o.tags.includes( A_o.COLLECTION_s ) ) menu_a.push( data_o )
+  menuRead__v( data_o )
   //... what else?
   return start_s
 }
