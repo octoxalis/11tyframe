@@ -16,7 +16,6 @@
 │       ├── string.js
 │       └── template_process.js
 |
-|
 ├── matrix
 │   ├── assets
 │   │   ├── icons
@@ -81,6 +80,7 @@
 │   │   │   └── _sitemap_.njk
 │   │   ├── _article_.njk
 │   │   ├── _banner_.njk
+│   │   ├── _colophon_.njk
 │   │   ├── _comment_.njk
 │   │   ├── _description_.njk
 │   │   ├── _favicon_.njk
@@ -103,44 +103,30 @@
 │   ├── offline.njk
 │   └── sitemap.njk
 |
-|
-└── matter
-    ├── assets
-    │   ├── scripts
-    │   │   └── js
-    │   │       ├── lib
-    │   │       │   ├── A_o.js
-    │   │       │   ├── C_o.js
-    │   │       │   ├── D_o.js
-    │   │       │   ├── F_o.js
-    │   │       │   └── U_o.js
-    │   │       ├── lib.md
-    │   │       ├── service.md
-    │   │       └── webmanifest.md
-    │   └── styles
-    │       └── css
-    │           └── lib.md
-    └── pages
-        ├── parts
-        │   └── _source_tree_.txt
-        ├── 404.md
-        ├── creating_menu.md
-        ├── eleventy_configure.md
-        ├── feed.md
-        ├── frontmatter_data.md
-        ├── frontmatter_function.md
-        ├── index.md
-        ├── menu.md
-        ├── minifying.md
-        ├── names_guide.md
-        ├── offline.md
-        ├── pre_post_processing.md
-        ├── shortcodes.md
-        ├── shorthands.md
-        ├── site_cloning.md
-        ├── site_configure.md
-        ├── site_structure.md
-        ├── sitemap.md
-        ├── source_tree.md
-        ├── styles_guide.md
-        └── variables_inheritance.md
+├── matter
+│   ├── assets
+│   │   ├── scripts
+│   │   │   └── js
+│   │   │       ├── lib
+│   │   │       │   ├── A_o.js
+│   │   │       │   ├── C_o.js
+│   │   │       │   ├── D_o.js
+│   │   │       │   ├── F_o.js
+│   │   │       │   └── U_o.js
+│   │   │       ├── lib.md
+│   │   │       ├── service.md
+│   │   │       └── webmanifest.md
+│   │   └── styles
+│   │       └── css
+│   │           └── lib.md
+│   └── pages
+│       ├── parts
+│       │   └── _source_tree_.txt
+│       ├── 404.md
+│       ├── feed.md
+│       ├── index.md
+│       ├── install.md
+│       ├── menu.md
+│       ├── offline.md
+│       └── sitemap.md
+└── configure.js
