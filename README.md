@@ -10,6 +10,6 @@ Using the full power of
 
 in a carefuly designed blog site.
 
-Follow these [instructions](https://11tyframe.netlify.com/install.html) to install 11tyFrame.
+Follow these [instructions](https://11tyframe.netlify.com/posts/install.html) to install 11tyFrame.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45be257f-c636-4cd9-975b-ad608262f3ff/deploy-status)](https://app.netlify.com/sites/11tyframe/deploys)
