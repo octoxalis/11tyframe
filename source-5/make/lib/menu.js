@@ -22,16 +22,16 @@ module.exports = menu_a =>
   <h2 data--="menu_order">${'All ' + A_o.COLLECTION_s + 's'}</h2>
   <ol data--="menu_list">
 `
-  for ( let at_n = 0; at_n < menu_a.length; ++at_n )
+  for ( let entry_o of menu_a )
   {
     ++order_n    // index 1
-    const link_s = `${U_o.url_s}${menu_a[at_n].permalink}`
+    const link_s = `${U_o.url_s}${entry_o.permalink}`
     menu_s +=
 `
     <li data--="menu_item">
       <span>${order__s( order_n )}</span>
-      <span><a href="${link_s}">${menu_a[at_n].title_s}</a></span>
-      <ins data--="inline_note"><sup></sup><span data--="note_content">${menu_a[at_n].abstract_s}</span></ins>
+      <span><a href="${link_s}">${entry_o.title_s}</a></span>
+      <ins data--="inline_note"><sup></sup><span data--="note_content">${entry_o.abstract_s}</span></ins>
     </li>
 `
   }

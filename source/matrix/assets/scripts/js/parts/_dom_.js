@@ -41,4 +41,21 @@ const DOM_listReverse__v = selector_s =>
   nodes_a.forEach( node_e => node_e.parentNode.insertBefore( node_e, node_e.parentNode.firstChild ) )
 }
 
-const DOM_scrollToTop__v = () => window.scroll( { top: 0, left: 0, behavior: 'smooth' } )
+const DOM_scroll__v = bottom_b =>
+{
+  const options_o =
+  {
+    top: bottom_b ? document.querySelector( 'body' ).offsetHeight : 0,
+    left: 0,
+    behavior: 'smooth'
+  }
+  window.scroll( options_o )
+}
+
+const DOM_locationKey__s = () =>
+{
+  const extension_n = '.html'.length
+  let location_s = window.location.href
+  const key_s = location_s.slice( location_s.lastIndexOf( '{{A_o.COLLECTION_s}}s/'), -extension_n )
+  return key_s
+}

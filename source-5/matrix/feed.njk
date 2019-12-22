@@ -1,0 +1,10 @@
+{% set data_o = F_o.data__o( collections.all, permalink ) %}
+
+{{- '' | template_start( data_o ) -}}{# ante process #}
+
+{%- set _template_s %}
+<?xml version="1.0" encoding="utf-8"?>
+{% include "parts/blocks/_feed_.njk" %}
+{% endset -%}
+
+{{- _template_s | safe | template_end( data_o ) | minify_html -}}{# post process #}

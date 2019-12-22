@@ -1,42 +1,31 @@
-const path_s = '../../matter/assets/scripts/js/lib/'
-const A_o = require( `${path_s}A_o.js` )
-const F_o = require( `${path_s}F_o.js` )
+const STRING_o = require( './string.js' )
 
-const files_a = F_o.files__a() //require( 'klaw-sync' )( MD_DIR_s, { nodir: true, depthLimit: DEPTH_n } )
-var count_n   = files_a ? files_a.length : 0
-var at_n      = 0
-var menu_a    = []
+let files_a       = null
+let count_n       = 0
+let current_n     = 0
 
-const menuRead__v = data_o =>
+void function ()
 {
-  if ( data_o.tags && data_o.tags.includes( A_o.COLLECTION_s ) ) menu_a.push( data_o )
+  const MD_DIR_s = './matter/pages/'    //: all Mardown files
+  const DEPTH_n  = 0                    //: ...are located at the root level of MD_DIR_s
+  files_a = require( 'klaw-sync' )( MD_DIR_s, { nodir: true, depthLimit: DEPTH_n } )
+  if ( files_a ) count_n = files_a.length
+} ()
+
+
+const buildStart__v = data_o =>
+{
+  console.log( `${count_n} Markdown files to process` )
 }
 
-const menuWrite__v = () =>
+const buildEnd__v = data_o =>
 {
-  //console.log( `${files_a.length} Markdown files processed` )
-  console.log( `Writing ../site/menu.html from template_process.js` )
-  require('fs-extra')
-    .outputFile( '../site/menu.html',
-      require( './menu.js' )( menu_a ),
-      err_s => console.log ( err_s || 'Build success!' ) )
-}
-
-const buildStart__s = ( input_s, data_o ) =>
-{
-  console.log( `${files_a.length} Markdown files to process` )
-}
-
-const buildEnd__s = ( input_s, data_o ) =>
-{
-  menuWrite__v()
   //... what else?
 }
 
 const templateStart__s = ( input_s, data_o ) =>
 {
   let start_s = input_s
-  menuRead__v( data_o )
   //... what else?
   return start_s
 }
@@ -66,7 +55,7 @@ module.exports =
 {
   start__s: ( input_s, data_o ) =>
   {
-    if ( at_n === 0 && files_a ) buildStart__s( files_a, data_o )
+    if ( current_n === 0 && !files_a ) buildStart__v( data_o )
     let start_s = templateStart__s( input_s, data_o )
     return start_s
   },
@@ -77,10 +66,9 @@ module.exports =
 
   end__s: ( input_s, data_o ) =>
   {
-    ++at_n
+    ++current_n
     let end_s = templateEnd__s( input_s, data_o )
-    if ( at_n === count_n && files_a ) buildEnd__s( files_a, data_o, menu_a )
+    if ( current_n === count_n && files_a ) buildEnd__v( data_o )
     return end_s
   },
-
 }

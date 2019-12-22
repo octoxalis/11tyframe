@@ -2,57 +2,33 @@
  * Functions
  * Naming scheme: function__s
  */
-
+const A_o = require( './A_o.js' )
 const U_o = require( './U_o.js' )
 
-const EXPORT_a =    // default exported data
-[
-  'date',
-  'layout',
-  'permalink',
-  'tags',
-  'menu_n',
-  'title_s',
-  'subtitle_s',
-  'abstract_s',
-  'author_s',
-]
-
-const MD_DIR_s = './matter/pages/'    //: all Mardown files
-const DEPTH_n  = 0                    //: ...are located at the root level of MD_DIR_s
-
-const OPEN_s = '[='   //: substitute__s function delimiter
+const OPEN_s  = '[='   //: substitute__s function delimiter
 const CLOSE_s = '=]'  //: idem
 
 module.exports =
-{
-  siteUrl__s: ( file_s, dir_s='posts/' ) => `[${file_s.replace('_', ' ')}]: ${U_o.url_s}${dir_s}${file_s}.html`,
+{  
+  siteUrl__s: ( file_s, dir_s=`${A_o.COLLECTION_s}s/` ) => `[${file_s.replace('_', ' ')}]: ${U_o.url_s}${dir_s}${file_s}.html`,
+
+  eleventyUrl__s: key_s =>
+  {
+    const path_s = U_o[ `ELEVENTY_${key_s}` ]
+    const anchor_n = path_s.indexOf( '#')
+    if ( anchor_n === -1 )    //: return a link to 11ty.dev
+    {
+      console.log( `ALERT! no anchor found in path: ${path_s}` )
+      const ref_n = U_o.ELEVENTY_DEV_s.indexOf( ':' )
+      return { ref: U_o.ELEVENTY_DEV_s.substring( 0, ref_n ), link: U_o.ELEVENTY_DEV_s }
+    }
+    const anchor_s = path_s.substring( anchor_n )
+    const anchorLink_s = U_o.ELEVENTY_DEV_s.replace( ']', `${anchor_s}]`) + path_s
+    return { ref: anchorLink_s.substring( 0, anchorLink_s.indexOf( ':') ), link: anchorLink_s }
+  },
 
   tagEscape__s: content_s => content_s.replace( /</g, '&lt;' ).replace( />/g, '&gt;' ),
 
-  files__a: () => require( 'klaw-sync' )( MD_DIR_s, { nodir: true, depthLimit: DEPTH_n } ),
-
-  data__o: ( collection_a, permalink_s ) =>
-  {
-    //; console.log( permalink_s )    //: uncomment this line to output permalink
-    let export_o = {}
-    for ( const post_n in collection_a )
-    {
-      const data_o = collection_a[post_n].data
-      if ( data_o.permalink === permalink_s )
-      {
-        if ( data_o.export_a === null ) export_o = data_o    //: get all data!
-        else
-        {
-          const export_a = data_o.export_a || EXPORT_a    //: get declared or default data only
-          export_a.forEach( prop_s => export_o[prop_s] = data_o[prop_s] )
-        }
-      }
-    }
-    //;console.log( export_o )    //: uncomment this line to output all data
-    return export_o
-  },
-  
   substitute__s: ( hay_s, dict_o, open_s=OPEN_s, close_s=CLOSE_s ) =>
   {
     const open_n = open_s.length

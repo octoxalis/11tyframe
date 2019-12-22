@@ -1,12 +1,12 @@
 ---js
 {
-  date:      `2019-09-01`,
+  date:      `2019-12-12`,
   layout:    `feed.njk`,
   permalink: `feed.xml`,
   tags:      [ `notag` ],
   eleventyExcludeFromCollections: false,
 
-  title_s:    `posts list!`,
-  abstract_s: `RSS feed of posts published on this site`,
+  title_s:    `Tips list!`,
+  abstract_s: `RSS feed of tips published on this site`,
 }
 ---

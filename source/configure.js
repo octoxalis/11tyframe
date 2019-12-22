@@ -18,4 +18,7 @@ module.exports =
     DESCRIPT_s: '11ty Frame blog',
     GLOBAL_s:   'Eleventy,static site generator',
   },
+
+  HUE_P_n: 0,    //: theme primary color in range [0...359]
+
 }

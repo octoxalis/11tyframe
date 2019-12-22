@@ -8,7 +8,7 @@
   eleventyExcludeFromCollections: false,
   no_comments: true,
 
-  menu_n:     1,
+  rank_n:     1,
   title_s:    `Install 11ty Frame`,
   subtitle_s: `How to install your 11ty Frame blog`,
   abstract_s: `Follow these instructions`,
@@ -72,15 +72,15 @@ Once installed and deployed
 {% _short_note %}
 Using Netlify is the easiest way, but any alternative is as simple.
 {% end_short_note %}
-, you have to modify the entries found in the `install.js` file located at the root of your source directory
+, you have to modify the entries found in the `configure.js` file located at the root of your source directory
 {% _short_note %}
-the `AUTHOR_s` and `EMAIL_s` properties are slightly different in the `install.js` file, but it's because the {{A_o.NAME_s}} demo site requires real initial values.
+the `AUTHOR_s` and `EMAIL_s` properties are slightly different in the `configure.js` file, but it's because the {{A_o.NAME_s}} demo site requires real initial values.
 {% end_short_note %}
 .
 
 
 {% _code_block %}
-    title_s: 'source/install.js',
+    title_s: 'source/configure.js',
     lang_s: 'javascript',
 [//]:#(_code_block)
 {% raw %}
