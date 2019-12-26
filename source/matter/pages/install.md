@@ -137,7 +137,7 @@ If you don't want to have comments on any page, just add a property `no_comments
 
 
 {% _code_block %}
-    title_s: 'source/matter/pages.install.md',
+    title_s: 'source/matter/pages/install.md',
     lang_s: 'javascript',
 [//]:#(_code_block)
 {% raw %}
