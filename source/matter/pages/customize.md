@@ -64,7 +64,7 @@ module.exports =
 {% end_code_block %}
 
 
-The properties of this configuration file as self-documenting but some of them need a few explanations, notably those properties whose names begin by _HUE_ and _LUM_.
+The properties of this configuration file are self-documenting but some of them need a few explanations, notably those properties whose names begin by _HUE_ and _LUM_.
 
 All sites colors are defined by CSS custom properties and the _HUE_ poperties define the variations of these colors:
 + **P** stands for primary color;
