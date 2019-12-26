@@ -40,9 +40,17 @@ it is [zero-config]{{U_o.OUTLINK_s}} out of the box!
 {{A_o.NAME_s}} design and styles have been carefully developed to give you a nice and simple presentation while offering advanced capabilities:
 + responsive layout with *fluid typography*;
 + full Markdown content, styling, linking, etc.;
-+ smart inline notes;
++ smart inline notes
+{% _short_note %}
+now you see me!
+{% end_short_note %}
+;
 + highlighted code blocks powered by Lea Verou's [Prism];
-+ smart color theme and light/dark mode (just a click inside the site banner!);
++ smart color theme and light/dark mode
+{% _short_note %}
+try it by a clicking inside the site banner!
+{% end_short_note %}
+;
 + IndexedDB API to store anything you want;
 + Atom RSS feed;
 + sitemap for search engines;
