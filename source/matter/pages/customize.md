@@ -66,7 +66,7 @@ module.exports =
 
 The properties of this configuration file are self-documenting but some of them need a few explanations, notably those properties whose names begin by _HUE_ and _LUM_.
 
-All sites colors are defined by CSS custom properties and the _HUE_ poperties define the variations of these colors:
+All {{A_o.NAME_s}} colors are defined by CSS custom properties and the _HUE_ properties define the variations of these colors:
 + **P** stands for primary color;
 + **L** links color;
 + **S** secondary color;
@@ -79,7 +79,8 @@ something outstanding in your content
 
 { data--="ulist" }
 
-These properties values are numbers, positive and negative, specifying the variation around the base value that you choose: `HUE_P_n`. For instance, if you set:
+These properties values are numbers, positive and negative, specifying the variation around the _primary_ color (`HUE_P_n`) value that you declare.
+For instance, if you set:
 
 HUE_P_n: 153,<br/>
 HUE_L_n: 50,
@@ -89,7 +90,7 @@ this declaration will yield a link color of `203` for anchors
 {% _short_note %}
 `153 + 50 = 203`
 {% end_short_note %}
-. Similarly, the secondary color (`HUE_S_n`) will be `103`
+. Similarly, the _secondary_ color (`HUE_S_n`) will be `103`
 {% _short_note %}
 `153 - 50 = 103`
 {% end_short_note %}
@@ -98,13 +99,13 @@ but you could have well define that property as:
 HUE_S_n: -30,
 {data--="example"}
 
-to obtain `123` as secondary color hue
+to obtain `123` as _secondary_ color hue
 {% _short_note %}
 `153 - 30 = 123`
 {% end_short_note %}
 . Nothing requires you to have simetrical values for your color variations, you only have to experiment some combinations to get what you consider the optimal result.
 
-All variations once defined, any visitor of your site will be able to change the base color hue with a single click over the page header, selecting one of the 360 different hues available in the HSL color system used by {{A_o.NAME_s}}. Nevertheless, if you want to prevent the possiblity to change this base color hue, you can do it by setting the `HUE_SET_n` to `0` in the `configure.js` file;
+All variations once defined, any visitor of your site will be able to change the base color hue with a single click over the page header, selecting one of the 360 different hues available in the HSL color system used by {{A_o.NAME_s}}. Nevertheless, if you want to prevent the possiblity to change this base color hue, you can do it by setting the `HUE_SET_n` to `0` in the `configure.js` file.
 
 
 {% _anchor %}
