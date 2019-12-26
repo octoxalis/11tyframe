@@ -25,6 +25,8 @@ module.exports =
   HUE_I_n: 20,       //: theme important color offset from primary color
   HUE_D_n: -20,      //: theme decorative color offset from primary color
 
+  HUE_SET_n: 1,     //: allow visitor color palette setting
+
   LUM_MODE_n:     1,   //: luminosity mode: 1 (light) || -1 (dark)
   LUM_CONTRAST_n: 40,  //: luminosity contrast in range [30...49] (30 is less contrast than 49)
                        //: see https://www.w3.org/TR/WCAG20/ §1.4.1 compliance

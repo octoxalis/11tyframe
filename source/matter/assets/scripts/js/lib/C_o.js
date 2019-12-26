@@ -12,6 +12,7 @@ module.exports =
   HUE_S_n:    CONF_o.HUE_S_n,
   HUE_I_n:    CONF_o.HUE_I_n,
   HUE_D_n:    CONF_o.HUE_D_n,
+  HUE_SET_n:  CONF_o.HUE_SET_n,
 
   LUM_MODE_n:     CONF_o.LUM_MODE_n,
   LUM_CONTRAST_n: CONF_o.LUM_CONTRAST_n,
