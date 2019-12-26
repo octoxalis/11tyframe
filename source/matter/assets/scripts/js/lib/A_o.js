@@ -21,6 +21,4 @@ module.exports =
     GLOBAL_s:   CONF_o.description_o.GLOBAL_s,
   },
 
-  HUE_P_n: CONF_o.HUE_P_n,    //: theme primary color
-
 }
