@@ -1,6 +1,6 @@
 {
   "name":"11tyframe",
-  "start_url": "https://11tyframe.netlify.com/",
+  "start_url": "http://127.0.0.1:5500/",
   "short_name":"11tyframe",
   "description": "11ty Frame blog",
   "icons":
