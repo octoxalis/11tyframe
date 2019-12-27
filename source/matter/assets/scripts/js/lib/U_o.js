@@ -20,6 +20,7 @@ const U_o =
 
   HOME_s:    `[Home page]: ${A_o.URL_s}`,
   COMMENT_s: `[utteranc.es]: https://github.com/utterance/utterances`,
+  NETLIFY_s: `https://www.netlify.com`,
   NODE_s :   `[Node.js]: https://nodejs.org`,
 
   FRAME_s:     '11ty Frame',
