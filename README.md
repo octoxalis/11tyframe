@@ -8,7 +8,11 @@ Using the full power of
 + [Nunjucks](https://mozilla.github.io/nunjucks/),
 + [Markdown](https://daringfireball.net/projects/markdown/)
 
-in a carefuly designed blog site.
+in a carefuly designed blog site for accessibility and performance.
+
+<img src="lighthouse_audit.svg"
+    width="404" height="352"
+    alt="Lighthouse audit of 11tyFrame"/>
 
 Follow these [instructions](https://11tyframe.netlify.com/posts/install.html) to install 11tyFrame.
 
