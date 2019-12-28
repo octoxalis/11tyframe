@@ -93,7 +93,7 @@ void function ()
   lightDark__v()
 
 //> Easter egg for developers who read sources
-//> change UI base color
+//> change UI base color + light/dark mode
   const header_e = document.querySelector( '[data--="header"]' )
   header_e.addEventListener('click', click_o =>
     {

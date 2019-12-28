@@ -1,12 +1,11 @@
 :root
 {
   --c_hue_base: {{C_o.HUE_BASE_n}};
-
   --c_hue_p: calc( var(--c_hue_base) + 0 );
-  --c_hue_l: calc( var(--c_hue_base) + {{C_o.HUE_L_n}} );
   --c_hue_s: calc( var(--c_hue_base) + {{C_o.HUE_S_n}} );
   --c_hue_i: calc( var(--c_hue_base) + {{C_o.HUE_I_n}} );
   --c_hue_d: calc( var(--c_hue_base) + {{C_o.HUE_D_n}} );
+  --c_hue_l: calc( var(--c_hue_base) + {{C_o.HUE_L_n}} );
 
   --c_sat:       50%;
     --c_sat_hi:  90%;
@@ -14,13 +13,13 @@
     --c_sat_mlo: 25%;
     --c_sat_lo:  10%;
 
-  --lum_mode:     {{C_o.LUM_MODE_n}};
-  --lum_contrast: {{C_o.LUM_CONTRAST_n}};
+  --lum_mode: -1;
   --lum_base: 50;
 
-  --c_lum:      calc( var(--lum_base) * 1% );
-    --c_lum_hi: calc( ( var(--lum_base) + ( var(--lum_mode) * var(--lum_contrast)) ) * 1% );
-    --c_lum_lo: calc( ( var(--lum_base) - ( var(--lum_mode) * var(--lum_contrast)) ) * 1% );
+  --c_lum:      calc( ( var(--lum_base) +  0 ) * 1% );
+    --c_lum_hi: calc( ( var(--lum_base) + ( var(--lum_mode) * 40) ) * 1% );
+    --c_lum_lo: calc( ( var(--lum_base) - ( var(--lum_mode) * 40) ) * 1% );
+    --c_lum_me: calc( ( var(--lum_base) - ( var(--lum_mode) * 20) ) * 1% );
 
   --c_opac:      .5;
     --c_opac_hi: 1;
