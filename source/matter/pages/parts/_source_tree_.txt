@@ -95,7 +95,7 @@
 │   │   ├── _seo_.njk
 │   │   ├── _site_url_.njk
 │   │   ├── _style_.njk
-│   │   ├── _style_inline_.njk
+│   │   ├── _css_inline_.njk
 │   │   └── _webmanifest_.njk
 │   ├── feed.njk
 │   ├── frame.njk

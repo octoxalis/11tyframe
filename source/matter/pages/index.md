@@ -60,11 +60,7 @@ try it by a clicking inside the site banner!
 { data--="ulist" }
 
 
-This page and the **[install]** page give you the instructions to customize your new blog and are supposed to be replaced as soon as you have fresh matter for your blog
-{% _short_note %}
-an easy way to customize your site styles will be added in a near future...
-{% end_short_note %}
-.
+This page and the **[install]** page give you the instructions to customize your new blog and are supposed to be replaced as soon as you have fresh matter for your blog.
 
 
 **That's all Folks!**

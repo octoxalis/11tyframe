@@ -38,6 +38,7 @@ module.exports = make_o =>
 {
   [ 'more_to_come',
     'short_note',
+    'img_note',
     'code_block',
     'replace_all',
     'anchor'

@@ -88,6 +88,11 @@
   content: '\00bb';
 }
 
+[data--=note_content] img
+{
+  max-width: calc( var(--line_width) - var(--PAD_1) * 12 );
+}
+
 .note_open    /* after [data--=note_content] */
 {
   margin: var(--PAD_2) var(--PAD_4) var(--PAD_2) 0;
