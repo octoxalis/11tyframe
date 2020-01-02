@@ -12,6 +12,8 @@ module.exports =
 {  
   siteUrl__s: ( file_s, dir_s=`${A_o.COLLECTION_s}s/` ) => `[${file_s.replace('_', ' ')}]: ${U_o.url_s}${dir_s}${file_s}.html`,
 
+  codeUrl__s: path_s => `<a href="${U_o.GIT_SRC_s}${path_s}" target="_blank" rel="noreferrer noopener">${A_o.ID_s}/${path_s}</a>`,
+
   eleventyUrl__s: key_s =>
   {
     const path_s = U_o[ `ELEVENTY_${key_s}` ]

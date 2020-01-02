@@ -108,14 +108,9 @@ from your {{A_o.ID_s}} `source` directory.
 {% end_short_note %}
 
 
-{% _code_block %}
-    title_s: 'shell command',
-    lang_s: 'shell',
-[//]:#(_code_block)
-{% raw %}
 npx eleventy --config=make/11ty/make.js
-{% endraw %}
-{% end_code_block %}
+{data--="example"}
+
 
 
 Then, begin to write your first posts
@@ -176,8 +171,8 @@ for instance to  have a handy reference
 {% end_short_note %}
 , without building them in your site, you just have to change two lines in their frontmatter section, replacing ex.1 code by ex.2 code:
 
-permalink: `install.html`,<br/>
-tags:      [ `post` ],
+permalink: 'install.html',<br/>
+tags:      [ 'post' ],
 {data--="example"}
 
 permalink: false,<br/>
