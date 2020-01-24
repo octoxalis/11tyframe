@@ -14,6 +14,8 @@ module.exports =
 
   codeUrl__s: path_s => `<a href="${U_o.GIT_SRC_s}${path_s}" target="_blank" rel="noreferrer noopener">${A_o.ID_s}/${path_s}</a>`,
 
+  img1px__s: () => 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=',
+  
   eleventyUrl__s: key_s =>
   {
     const path_s = U_o[ `ELEVENTY_${key_s}` ]

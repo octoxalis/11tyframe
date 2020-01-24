@@ -56,6 +56,11 @@ try it by a clicking inside the site banner!
 + sitemap for search engines;
 + smart [utteranc.es] commenting system using your own Github repository issues;
 + service worker for offline visiting.
++ on-demand image loading
+{% _short_img %}
+![Hi Tux][1PX]{data-src="{{U_o.url_s}}assets/media/phoca_thumb.webp" data-size="150"}
+{% end_short_img %}
+
 
 { data--="ulist" }
 
@@ -75,3 +80,5 @@ This page and the **[install]** page give you the instructions to customize your
 [Node.js]:     https://nodejs.org
 [Prism]:       https://prismjs.com
 [formula]:     https://www.smashingmagazine.com/2016/05/fluid-typography/#comments-fluid-typography
+
+[1PX]: {{ F_o.img1px__s() }} "Hi Tux!"
