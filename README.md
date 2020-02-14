@@ -1,22 +1,8 @@
-# [11tyFrame](https://11tyframe.netlify.com)
+# [WIC](https://wic.netlify.com)
 
 
-A light site frame powered by [Eleventy](https://www.11ty.io) static site generator.
+Le site de l'étonnant Wormhout International Challenge.
 
-Using the full power of
-+ [Node.js](https://nodejs.org),
-+ [Nunjucks](https://mozilla.github.io/nunjucks/),
-+ [Markdown](https://daringfireball.net/projects/markdown/)
-
-for _accessibility_ and _performance_ in a carefuly designed blog site.
-
-Follow these [instructions](https://11tyframe.netlify.com/posts/install.html) to install 11tyFrame.
-
-Lighthouse scores
-
-<img src="lighthouse_audit.svg"
-    width="806" height="704"
-    alt="Lighthouse audit of 11tyFrame"/>
-
+Mis en ligne avec la complicité du générateur de site [Eleventy](https://11ty.dev) et servi par [Netlify](https://netlify.com)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45be257f-c636-4cd9-975b-ad608262f3ff/deploy-status)](https://app.netlify.com/sites/11tyframe/deploys)

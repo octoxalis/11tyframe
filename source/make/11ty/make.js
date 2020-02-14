@@ -16,7 +16,7 @@ const MAKE_o =
 
   tag_a:    //: to create collections
   [
-    { tag_s: 'post', sort_f: 'sortByRank__a' },
+    { tag_s: 'tip', sort_f: 'sortByRank__a' },
   ],
   static_o: { "matrix/assets/static": "assets" },    //: static files
   dirs_o:

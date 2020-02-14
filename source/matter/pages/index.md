@@ -1,84 +1,67 @@
 ---js
 {
-  date:      `2019-11-01`,
+  date:      `2020-02-14`,
   layout:    `frame.njk`,
   permalink: `index.html`,
   tags:      [ `notag` ],
   eleventyExcludeFromCollections: false,
-  no_comments: true,
 
-  title_s:    `Welcome`,
-  subtitle_s: `11ty Frame blog`,
-  abstract_s: `A blog powered by Eleventy`,
-  author_s:   `Me`,
+  title_s:    `wic`,
+  subtitle_s: `En direct de Wormhout`,
+  abstract_s: `Denis reste à votre écoute`,
+  author_s:   `Daniel`,
 }
 ---
 [comment]: # (======== Post ========)
-# Welcome to {{A_o.NAME_s}}
+# Bienvenue
 
-A site powered by [Eleventy]{{U_o.OUTLINK_s}} static site generator.{ data--="page_intro" }
+Ceci n'est pas un comptoir, mais pourrait bien le devenir,<br/>
+En tous cas, ne manquez pas ses brèves.{ data--="page_intro" }
 
 {% _anchor %}
-## It's Eleventy time!
+## C'est l'heure du Challenge!
 {% end_anchor %}
 
 
-Eleventy (11ty for short) is a static site generator rapidly gaining popularity among JAMstack developers. Its learning curve is short and it offers the largest choice of templating languages compared with others popular SSG.
+Challenge, mais quel Challenge?
+
+Eh pardi! Celui de Wormhout, du 4 au 9 mai 2020 sous la direction d'un directeur, d'un vrai, Denis, l'homme aux mille resources.
 
 
-11ty can be used without any configuration
-{% _short_note %}
-it is [zero-config]{{U_o.OUTLINK_s}} out of the box!
-{% end_short_note %}
-, but its power comes from the fact that it is backed by the huge [Node.js]{{U_o.OUTLINK_s}} ecosystem. Therefore, when building your static site with 11ty, you can do anything Node is able to do.
 
 {% _anchor %}
-## A frame for your blog
+## Des images, des commentaires et puis quoi encore?
 {% end_anchor %}
 
 
-{{A_o.NAME_s}} design and styles have been carefully developed to give you a nice and simple presentation while offering advanced capabilities:
-+ responsive layout with *fluid typography*;
-+ full Markdown content, styling, linking, etc.;
-+ smart inline notes
-{% _short_note %}
-now you see me!
-{% end_short_note %}
-;
-+ highlighted code blocks powered by Lea Verou's [Prism];
-+ smart color theme and light/dark mode
-{% _short_note %}
-try it by a clicking inside the site banner!
-{% end_short_note %}
-;
-+ IndexedDB API to store anything you want;
-+ Atom RSS feed;
-+ sitemap for search engines;
-+ smart [utteranc.es] commenting system using your own Github repository issues;
-+ service worker for offline visiting.
-+ on-demand image loading
-{% _short_img %}
-![Hi Tux][1PX]{data-src="{{U_o.url_s}}assets/media/phoca_thumb.webp" data-size="150"}
-{% end_short_img %}
+Il en faut pour tous les goûts alors on fera du mieux possible pour motiver tous les gais participants
+{% _note_txt %}
+n'oubliez pas qu'après l'effort, il y a le réconfort...
+{% end_note_txt %}
+. Donc des images, des vidéos, des soirées arrosées
+{% _note_txt %}
+uniquement à l'eau de source, c'est juré, cochon qui s'en dédit.
+{% end_note_txt %}
 
 
-{ data--="ulist" }
-
-
-This page and the **[install]** page give you the instructions to customize your new blog and are supposed to be replaced as soon as you have fresh matter for your blog.
-
-
-**That's all Folks!**
+Pour les commentaires, il y a un truc
+{% _note_txt %}
+falait s'en douter!
+{% end_note_txt %}
+. En fait, il suffit de créer un compte sur le site Github
+{% _note_txt %}
+le rendez-vous interlope des développeurs de site Web, dont je fait partie...
+{% end_note_txt %}
+, c'est gratuit, ça n'engage à rien
+{% _note_txt %}
+sauf à copier vingt mille lignes de code en JavaScript, eh eh eh!
+{% end_note_txt %}
+, et ça peut rapporter gros
+{% _note_txt %}
+ah, vous voyez que vous en serez!
+{% end_note_txt %}
+, et plus si affinité.
 
 
 [comment]: # (======== Links ========)
 
-[install]:     ./posts/install.html
-[Eleventy]:    https://11ty.io
-[zero-config]: https://www.11ty.io/docs/resources/#zero-config
-[utteranc.es]: https://github.com/utterance/utterances
-[Node.js]:     https://nodejs.org
-[Prism]:       https://prismjs.com
-[formula]:     https://www.smashingmagazine.com/2016/05/fluid-typography/#comments-fluid-typography
-
-[1PX]: {{ F_o.img1px__s() }} "Hi Tux!"

@@ -8,7 +8,10 @@
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
 .zero_height
 {
   top: 100vh;
@@ -277,6 +280,7 @@ hr
 
 [data--=article]
 {
+<<<<<<< HEAD
   --inline_notes: article_notes;
   --examples: examples;
 
@@ -284,6 +288,15 @@ hr
 }
 
 [data--^=inline_]
+=======
+  --inline_note: article_notes;
+  --examples: examples;
+
+  counter-reset: var(--inline_note) var(--examples);
+}
+
+[data--^=note_]
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
 {
   --font_body:   90%;
   --font_sup:    60%;
@@ -292,6 +305,15 @@ hr
   text-decoration: none;
 }
 
+<<<<<<< HEAD
+=======
+[data--=note_img] > [data--=note_content] > img
+{
+  object-fit: fill;
+  object-position: left top;
+}
+
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
 [data--=note_content]
 {
   overflow: hidden;
@@ -303,9 +325,15 @@ hr
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 [data--^=inline_] > sup
 {
   counter-increment: var(--inline_notes);
+=======
+[data--^=note_] > sup
+{
+  counter-increment: var(--inline_note);
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
   top: -0.6rem;
   margin-right: .5rem;
   padding: 0 var(--PAD_2);
@@ -313,6 +341,7 @@ hr
   vertical-align: baseline;
   font-size: var(--font_sup);
 }
+<<<<<<< HEAD
 [data--=inline_img] > sup
 {
   border-bottom: var(--BORDER_1) solid var(--c_prim_hi);
@@ -320,6 +349,15 @@ hr
 [data--^=inline_] > sup::after
 {
   content: counter( var(--inline_notes) );
+=======
+[data--=note_img] > sup
+{
+  border-bottom: var(--BORDER_1) solid var(--c_prim_hi);
+}
+[data--^=note_] > sup::after
+{
+  content: counter( var(--inline_note) );
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
 }
 
 [data--=note_content] u    /* horizontal line */
@@ -364,10 +402,16 @@ hr
 
 .note_open    /* after [data--=note_content] */
 {
+<<<<<<< HEAD
+=======
+  display: flex;
+  flex-direction: column;
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
   margin: var(--PAD_2) var(--PAD_4) var(--PAD_2) 0;
   padding: var(--PAD_1) var(--PAD_2);
   width: auto;
   height: auto;
+<<<<<<< HEAD
   border-left: var(--BORDER_2) solid var(--c_prim_tr);
   transition: all 0.2s ease;
 }
@@ -377,6 +421,20 @@ hr
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+  color: var(--text_color);
+  background-color: var(--bg_color);
+  border-left: var(--PAD_2) solid var(--line_color);
+  font-size: var(--font_body);
+  transition: all 0.25s ease;
+}
+
+[data--=note_img] .note_open
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
   margin:  0;
   padding: 1rem;
   width: calc( var(--BODY_WIDTH) - var(--PAD_2) );
@@ -384,6 +442,50 @@ hr
   background: transparent;
 }
 
+<<<<<<< HEAD
+=======
+.note_link_a
+{
+  --button_n: 1;
+  --button_dim: 3rem;
+  --button_gap: .5rem;
+
+  margin: .5rem;
+  display: flex; /*flex-direction: row;*/
+  width: calc( (var(--button_n) * var(--button_dim)) + (var(--button_n) * var(--button_gap)) );
+  font-size: calc( var(--button_dim) * .6 );
+  line-height: 1;
+}
+
+.note_link
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .25rem;
+  width:  var(--button_dim);
+  height: var(--button_dim);
+  background:          hsla(var(--c_hue_s), var(--c_sat_hi), var(--c_lum_hi), 1.0);
+  color:               hsla(var(--c_hue_d), var(--c_sat_mlo), var(--c_lum_lo), 1.0);
+  border: .2rem solid hsla(var(--c_hue_d), var(--c_sat_mlo), var(--c_lum_lo), .5);
+  border-radius: .5rem;
+}
+.note_link:hover
+{
+  filter: var(--BUTTON_HOVER);
+}
+.note_link:focus
+{
+  filter: var(--BUTTON_FOCUS);
+}
+
+.note_link::before,
+.note_link::after
+{
+  display: none;
+}
+
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
 .note_open > [data-src]
 {
   width: 100%;
@@ -407,9 +509,15 @@ hr
 
 [data--=menu]
 {
+<<<<<<< HEAD
   --inline_notes: menu_notes;
 
   counter-reset: var(--inline_notes);
+=======
+  --inline_note: menu_notes;
+
+  counter-reset: var(--inline_note);
+>>>>>>> 70c9c5e6518bb7f7165611ea0ec3d89187965c9c
   top: 0;  /* default position */
 }
 
