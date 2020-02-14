@@ -1,8 +1,8 @@
 {
-  "name":"11tyframe",
-  "start_url": "https://11tyframe.netlify.com/",
-  "short_name":"11tyframe",
-  "description": "11ty Frame blog",
+  "name":"wic",
+  "start_url": "http://127.0.0.1:8080/",
+  "short_name":"wic",
+  "description": "Le blog des amis de Denis, créateur de l'étonnant Challenge",
   "icons":
   [
     {"src":"/assets/media/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},

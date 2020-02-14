@@ -43,7 +43,7 @@ const linkNear__v = ( event_s, link_e ) =>
     }
     else
     {
-      title_s = 'No more {{A_o.COLLECTION_s}}'
+      title_s = `Plus d'autres {{A_o.COLLECTION_s}}`
       abstract_s = ''
     }
     document.querySelector( '[data--="link_title"]' ).innerHTML = title_s
