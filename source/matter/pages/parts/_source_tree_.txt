@@ -42,15 +42,12 @@
 │   │   │   │   ├── FiraCode-Regular.woff2
 │   │   │   │   └── harmattan-v5-latin-regular.woff2
 │   │   │   ├── media
-│   │   │   │   ├── 1px.webp
-│   │   │   │   ├── Adam_de_Coster_color.jpg
-│   │   │   │   ├── Adam_de_Coster_gray.jpg
 │   │   │   │   ├── android-chrome-192x192.png
 │   │   │   │   ├── android-chrome-512x512.png
 │   │   │   │   ├── apple-touch-icon.png
 │   │   │   │   ├── favicon-16x16.png
 │   │   │   │   ├── favicon-32x32.png
-│   │   │   │   └── wide_img.webp
+│   │   │   │   └── lighthouse_audit.svg
 │   │   │   ├── scripts
 │   │   │   │   └── js
 │   │   │   │       ├── clipboard.min.js
@@ -75,7 +72,8 @@
 │   │           │   ├── _properties_.css
 │   │           │   ├── _rootvar_.css
 │   │           │   ├── _source_tree_.css
-│   │           │   └── _ui_.css
+│   │           │   ├── _ui_.css
+│   │           │   └── --_font_face_.css--
 │   │           ├── lib_comment.njk
 │   │           ├── lib_menu.njk
 │   │           ├── lib_prism.njk
@@ -92,6 +90,8 @@
 │   │   ├── _banner_.njk
 │   │   ├── _colophon_.njk
 │   │   ├── _comment_.njk
+│   │   ├── _css_incache_.njk
+│   │   ├── _css_inline_.njk
 │   │   ├── _description_.njk
 │   │   ├── _favicon_.njk
 │   │   ├── _feed_.njk
@@ -105,7 +105,6 @@
 │   │   ├── _script_.njk
 │   │   ├── _seo_.njk
 │   │   ├── _site_url_.njk
-│   │   ├── _style_inline_.njk
 │   │   └── _webmanifest_.njk
 │   ├── feed.njk
 │   ├── frame.njk
@@ -113,50 +112,36 @@
 │   ├── offline.njk
 │   └── sitemap.njk
 |
-└── matter
-    ├── assets
-    │   ├── scripts
-    │   │   └── js
-    │   │       ├── lib
-    │   │       │   ├── A_o.js
-    │   │       │   ├── C_o.js
-    │   │       │   ├── D_o.js
-    │   │       │   ├── F_o.js
-    │   │       │   ├── I_o.js
-    │   │       │   └── U_o.js
-    │   │       ├── lib.md
-    │   │       ├── netlify_headers.md
-    │   │       ├── service.md
-    │   │       └── webmanifest.md
-    │   └── styles
-    │       └── css
-    │           ├── lib_comment.md
-    │           ├── lib_menu.md
-    │           ├── lib_prism.md
-    │           └── lib.md
-    └── pages
-        ├── parts
-        │   └── _source_tree_.txt
-        ├── 404.md
-        ├── creating_menu.md
-        ├── css_mixins.md
-        ├── eleventy_configure.md
-        ├── feed.md
-        ├── frontmatter_data.md
-        ├── frontmatter_function.md
-        ├── index.md
-        ├── lightning_images.md
-        ├── menu.md
-        ├── minifying.md
-        ├── names_guide.md
-        ├── offline.md
-        ├── pre_post_processing.md
-        ├── shortcodes.md
-        ├── shorthands.md
-        ├── site_cloning.md
-        ├── site_configure.md
-        ├── site_structure.md
-        ├── sitemap.md
-        ├── source_tree.md
-        ├── styles_guide.md
-        └── variables_inheritance.md
+├── matter
+│   ├── assets
+│   │   ├── scripts
+│   │   │   └── js
+│   │   │       ├── lib
+│   │   │       │   ├── A_o.js
+│   │   │       │   ├── C_o.js
+│   │   │       │   ├── D_o.js
+│   │   │       │   ├── F_o.js
+│   │   │       │   ├── I_o.js
+│   │   │       │   └── U_o.js
+│   │   │       ├── lib.md
+│   │   │       ├── netlify_headers.md
+│   │   │       ├── service.md
+│   │   │       └── webmanifest.md
+│   │   └── styles
+│   │       └── css
+│   │           ├── lib_comment.md
+│   │           ├── lib_menu.md
+│   │           ├── lib_prism.md
+│   │           └── lib.md
+│   └── pages
+│       ├── parts
+│       │   └── _source_tree_.txt
+│       ├── 404.md
+│       ├── customize.md
+│       ├── feed.md
+│       ├── index.md
+│       ├── install.md
+│       ├── menu.md
+│       ├── offline.md
+│       └── sitemap.md
+└── configure.js

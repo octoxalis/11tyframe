@@ -339,8 +339,8 @@ a
 {
   position: relative;
 }
-a:not(.note_link)::before,
-a:not(.note_link)::after
+a::before,
+a::after
 {
   content: '';
   position: absolute;
@@ -351,23 +351,23 @@ a:not(.note_link)::after
   transform-origin: bottom left;
   transition: transform 0.3s ease;
 }
-a:not(.note_link)::before
+a::before
 {
   height: 1px;
 }
-a:not(.note_link)::after
+a::after
 {
   height: 4px;
   transform: scaleX(0);
 }
 
-a:not(.note_link):hover::after
+a:hover::after
 {
   transform: scaleX(1);
 }
 
-a:not(.note_link):focus,
-a:not(.note_link):hover
+a:focus,
+a:hover
 {
   color: var(--c_link);
 }

@@ -11,9 +11,9 @@
 
 [data--=menu]
 {
-  --inline_note: menu_notes;
+  --inline_notes: menu_notes;
 
-  counter-reset: var(--inline_note);
+  counter-reset: var(--inline_notes);
   top: 0;  /* default position */
 }
 

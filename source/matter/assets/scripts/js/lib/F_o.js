@@ -9,16 +9,27 @@ const OPEN_s  = '[='   //: substitute__s function delimiter
 const CLOSE_s = '=]'  //: idem
 
 module.exports =
-{
+{  
   siteUrl__s: ( file_s, dir_s=`${A_o.COLLECTION_s}s/` ) => `[${file_s.replace('_', ' ')}]: ${U_o.url_s}${dir_s}${file_s}.html`,
 
-  codeUrl__s: path_s =>
-  {
-    return ( path_s.indexOf( 'source/' ) === -1 ) ? path_s :
-      `<a href="${U_o.GIT_SRC_s}${path_s}" target="_blank" rel="noreferrer noopener">${A_o.ID_s}/${path_s}</a>`
-  },
+  codeUrl__s: path_s => `<a href="${U_o.GIT_SRC_s}${path_s}" target="_blank" rel="noreferrer noopener">${A_o.ID_s}/${path_s}</a>`,
 
   img1px__s: () => 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=',
+  
+  eleventyUrl__s: key_s =>
+  {
+    const path_s = U_o[ `ELEVENTY_${key_s}` ]
+    const anchor_n = path_s.indexOf( '#')
+    if ( anchor_n === -1 )    //: return a link to 11ty.dev
+    {
+      console.log( `ALERT! no anchor found in path: ${path_s}` )
+      const ref_n = U_o.ELEVENTY_DEV_s.indexOf( ':' )
+      return { ref: U_o.ELEVENTY_DEV_s.substring( 0, ref_n ), link: U_o.ELEVENTY_DEV_s }
+    }
+    const anchor_s = path_s.substring( anchor_n )
+    const anchorLink_s = U_o.ELEVENTY_DEV_s.replace( ']', `${anchor_s}]`) + path_s
+    return { ref: anchorLink_s.substring( 0, anchorLink_s.indexOf( ':') ), link: anchorLink_s }
+  },
 
   tagEscape__s: content_s => content_s.replace( /</g, '&lt;' ).replace( />/g, '&gt;' ),
 
@@ -64,6 +75,6 @@ module.exports =
     const till_s = new Date()
     till_s.setDate( till_s.getDate() + days_n )
     return till_s
-  },
+  }
 
 }

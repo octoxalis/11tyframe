@@ -1,9 +1,9 @@
 <menu data--="menu">
-  <h3><a href="{{ U_o.url_s }}">Accueil</a></h3>
+  <h3><a href="{{ U_o.url_s }}">Home</a></h3>
   {{ C_o.h4_a__s( U_o.GIT_s, 'Github' ) }}
   {{ C_o.h4_a__s( U_o.TWI_s, 'Twitter' ) }}
   {{ C_o.h4_a__s( U_o.RSS_s, 'RSS' ) }}
-  <h2 data--="menu_order">{{ 'Toutes les ' + A_o.COLLECTION_s}}</h2>
+  <h2 data--="menu_order">{{ 'All ' + A_o.COLLECTION_s + 's' }}</h2>
   <ol data--="menu_list">
 {% for _post_o in collections[A_o.COLLECTION_s] %}
     <li data--="menu_item">

@@ -1,0 +1,12 @@
+<script>
+if ( 'caches' in window )
+{
+  if ( caches )
+  {
+    caches.open( 'static' )
+      .then( cache => cache.put( 'css_incache.css',
+        new Response( document.querySelector( '[data--="css_inline"]' ).innerHTML,
+          { headers: {'Content-Type': 'text/css'} } ) ) )
+  }
+}
+</script>

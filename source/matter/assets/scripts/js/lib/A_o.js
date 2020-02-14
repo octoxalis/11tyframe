@@ -2,23 +2,23 @@
  * Authentication
  * Naming scheme: ID_s
  */
+const CONF_o = require( '../../../../../configure.js' )
 
 module.exports =
 {
-  AUTHOR_s:     'octoxalis',
-  EMAIL_s:      'octoxalis@gmail.com',
-    
-  ID_s:         'wic',
-  NAME_s:       'Wormhout Challenge',
-  URL_s:        'https://wic.netlify.com/',
-  LOCAL_s:      'http://127.0.0.1:8080/',
-  COLLECTION_s: 'nouvelles',
-  LANGUAGE_s:   'fr',
+  AUTHOR_s:      CONF_o.AUTHOR_s,
+  EMAIL_s:       CONF_o.EMAIL_s,
+  ID_s:          CONF_o.ID_s,
+  NAME_s:        CONF_o.NAME_s,
+  URL_s:         CONF_o.URL_s,
+  LOCAL_s:       CONF_o.LOCAL_s,
+  COLLECTION_s:  CONF_o.COLLECTION_s,
+  LANGUAGE_s:    CONF_o.LANGUAGE_s,
 
   description_o:
   {
-    DESCRIPT_s: `Le blog des amis de Denis, créateur de l'étonnant Challenge`,
-    GLOBAL_s:   `À la croisée des routes`,
-    TECH_s:     `Du vélo, encore du vélo`,  
+    DESCRIPT_s: CONF_o.description_o.DESCRIPT_s,
+    GLOBAL_s:   CONF_o.description_o.GLOBAL_s,
   },
+
 }
