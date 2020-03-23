@@ -1,4 +1,4 @@
-# [WIC](https://11tyframe.netlify.com)
+# [11tyFrame](https://11tyframe.netlify.com)
 
 
 # 11tyFrame
