@@ -7,7 +7,7 @@
 
 <p>At the root of the source directory there is a <code>configure.js</code> file that you can tweak as you see fit.</p>
 <hgroup data--="code_ref">
-<h5><a href="https://github.com/octoxalis/typexjs/blob/master/source/configures.js" target="_blank">typexjs/source/configures.js</a></h5>
+<h5><a href="https://github.com/octoxalis/11tyframe/blob/master/source/configures.js" target="_blank">11tyframe/source/configures.js</a></h5>
 <h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
 </hgroup>
 <pre><code class="language-javascript">
@@ -41,7 +41,7 @@ module.exports =
 <br/>
 </code></pre>
 <p>The properties of this configuration file are self-documenting but some of them need a few explanations, notably those properties whose names begin by <em>HUE</em> and <em>LUM</em>.</p>
-<p>All TypexJS colors are defined by CSS custom properties and the <em>HUE</em> properties define the variations of these colors:</p>
+<p>All 11ty Frame colors are defined by CSS custom properties and the <em>HUE</em> properties define the variations of these colors:</p>
 <ul data--="ulist">
 <li><strong>P</strong> stands for primary color;</li>
 <li><strong>L</strong> links color;</li>
@@ -64,5 +64,5 @@ HUE_L_n: 50,</p>
 <p>to obtain <code>123</code> as <em>secondary</em> color hue
 <ins data--="note_txt"><sup></sup><span data--="note_content"><code>153 - 30 = 123</code>
 </span></ins>. Nothing requires you to have simetrical values for your color variations, you only have to experiment some combinations to get what you consider the optimal result.</p>
-<p>All variations once defined, any visitor of your site will be able to change the base color hue with a single click over the page header, selecting one of the 360 different hues available in the HSL color system used by TypexJS. Nevertheless, if you want to prevent the possiblity to change this base color hue, you can do it by setting the <code>HUE_SET_n</code> to <code>0</code> in the <code>configure.js</code> file.</p>
+<p>All variations once defined, any visitor of your site will be able to change the base color hue with a single click over the page header, selecting one of the 360 different hues available in the HSL color system used by 11ty Frame. Nevertheless, if you want to prevent the possiblity to change this base color hue, you can do it by setting the <code>HUE_SET_n</code> to <code>0</code> in the <code>configure.js</code> file.</p>
 <div>
