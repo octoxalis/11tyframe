@@ -1,0 +1,38 @@
+<div data-slot=0>
+<script>window.parent.DOM_o.enableLink__v('prism_css')</script>
+
+<script>window.parent.DOM_o.enableLink__v('lib_prism')</script>
+
+<script>window.parent.DOM_o.enableScript__v('prism_js', true )</script>
+
+<p>A useful application of TypexJS naming scheme is when we want to <a href="https://www.audero.it/blog/2016/12/05/monkey-patching-javascript/" target="_blank">monkey patch</a> a library function, using a proxy, as we should do
+<ins data--="note_txt"><sup></sup><span data--="note_content">there is a good discussion about <a href="https://stackoverflow.com/questions/52945683/how-can-i-cleanly-monkey-patch-a-function-in-javascript/52945922#52945922" target="_blank">different ways</a> of doing it: the following example is extracted from its proxy case.
+</span></ins>:</p>
+<hgroup data--="code_ref">
+<h5>stackoverflow.com: how-can-i-cleanly-monkey-patch-a-function-in-javascript</h5>
+<h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
+</hgroup>
+<pre><code class="language-javascript">
+const handler_o =
+{
+  apply ( target_o, this_o, arg_a )  //: target_o and this_o aren't used here
+  {
+    console.log( `patched function is invoked with arguments: ${arg_a}` )
+    Reflect.apply( ...arguments )
+  }
+}
+<br/>
+const log__v = arg_ =>  console.log( `log__v is invoked with argument: ${arg_}` )
+const log_o = new Proxy( log__v, handler_o )
+<br/>
+//: Now proxy function can be invoked as:
+log_o( 'Hello' )
+log_o( ...['Hello'] )
+log_o.call( null, 'Hello' )
+log_o.apply( null, ['Hello'] )
+<br/>
+//: All the above invocations will print the following two lines:
+//-> patched function is invoked with arguments: Hello
+//-> log__v is invoked with argument: Hello
+</code></pre>
+<div>

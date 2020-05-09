@@ -13,6 +13,7 @@ const EXPORT_a =    // default exported data
   'subtitle_s',
   'abstract_s',
   'author_s',
+  'sitemap_b',
   'A_o',
 ]
 

@@ -28,17 +28,6 @@ module.exports = make_o =>
       keepClosingSlash: true,    //: for XML validation
     }) )
 
-  //: RSS feed
-  make_o.addFilter('feed_content', code_s => require('../lib/feed_content.js')( code_s ) )
-
-  const ISODATE__s = require('../lib/dateToISO.js')
-  make_o.addNunjucksFilter( "feed_date", date_o => ISODATE__s( date_o ) )
-
-  make_o.addNunjucksFilter( "feed_last_date", collection =>
-  {
-    if( !collection || !collection.length ) throw new Error( "Collection is empty in feed_last_date filter." )
-    return ISODATE__s( collection[ collection.length - 1 ].date )
-  } )
 
   const TEMPLATE_o = require('../lib/template_process.js')
   make_o.addFilter('head_end', ( head_s, ...args_ ) => TEMPLATE_o.head__s( head_s, ...args_ ) )
@@ -49,3 +38,17 @@ module.exports = make_o =>
   const MIXIN_o = require('../lib/css_mixin.js')
   make_o.addFilter('font_face', ( face_a, ...args_ ) => MIXIN_o.font_face__s( face_a, ...args_ ) )
 }
+
+
+
+  //: RSS feed
+  //XX make_o.addFilter('feed_content', code_s => require('../lib/feed_content.js')( code_s ) )
+
+  //XX const ISODATE__s = require('../lib/dateToISO.js')
+  //XX make_o.addNunjucksFilter( "feed_date", date_o => ISODATE__s( date_o ) )
+
+  //XX make_o.addNunjucksFilter( "feed_last_date", collection =>
+  //XX {
+  //XX   if( !collection || !collection.length ) throw new Error( "Collection is empty in feed_last_date filter." )
+  //XX   return ISODATE__s( collection[ collection.length - 1 ].date )
+  //XX } )

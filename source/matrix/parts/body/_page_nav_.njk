@@ -1,0 +1,51 @@
+{% set _svg_icon %}
+<svg
+  width="1.6em" height="1.6em"
+  class="svg_icon"
+  stroke="var(--c_icon)" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round"
+  fill="none">
+{% endset %}
+
+{% set _prev_next_icon %}
+{{_svg_icon}}<use xlink:href="#chevron" class="use_icon"></use></svg>
+{% endset %}
+
+{% set _top_bottom_icon %}
+{{_svg_icon}}<use xlink:href="#double_chevron" class="use_icon"></use></svg>
+{% endset %}
+
+{% set _prev_link %}
+{% if tags.includes( A_o.COLLECTION_s ) %}
+<button data--="nav_previous" aria-label="to previous post" tabindex="0" disabled>{{ _prev_next_icon }}</button>
+{% else %}
+<span></span>
+{% endif %}
+{% endset %}
+
+{% set _next_link %}
+{% if tags.includes( A_o.COLLECTION_s ) %}
+<button data--="nav_next" aria-label="to next post" tabindex="0" disabled>{{ _prev_next_icon }}</button>
+{% else %}
+<span></span>
+{% endif %}
+{% endset %}
+
+{% set _link_title %}
+<div data--="link_title" class="retract"></div>
+{% endset %}
+
+{% set _link_abstract %}
+<div data--="link_abstract" class="retract"></div>
+{% endset %}
+
+<nav  data--="page_nav">
+  <button data--="nav_top" aria-label="to page top" tabindex="0">{{ _top_bottom_icon }}</button>
+  {{_prev_link}}
+  {{_link_title}}
+  <button data--="nav_menu" aria-label="to menu" tabindex="0">
+    {{_svg_icon}}<use xlink:href="#elipsis" class="use_icon"></use></svg>
+  </button>
+  {{_link_abstract}}
+  {{_next_link}}
+  <button data--="nav_bottom" aria-label="to page bottom" tabindex="0">{{ _top_bottom_icon }}</button>
+</nav>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <symbol id="logo" viewBox="0 0 24 24">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+    <path d="M14 3v5h5M9.9 17.1L14 13M9.9 12.9L14 17"/>
+  </symbol>
+
+  <symbol id="clock" viewBox="0 0 24 24">
+    <circle  cx="12" cy="12" r="10"></circle>
+    <polyline  points="12 6 12 12 16 14"></polyline>
+  </symbol>
+
+  <symbol id="pencil" viewBox="0 0 24 24">
+    <path  d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+    <polygon  points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+  </symbol>
+
+  <symbol id="elipsis" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="1"></circle>
+    <circle cx="19" cy="12" r="1"></circle>
+    <circle cx="5" cy="12" r="1"></circle>
+  </symbol>
+
+  <symbol id="chevron" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6"/>
+  </symbol>
+
+  <symbol id="double_chevron" viewBox="0 0 24 24">
+    <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5"/>
+  </symbol>
+
+</svg>

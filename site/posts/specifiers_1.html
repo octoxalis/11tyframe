@@ -1,0 +1,38 @@
+<div data-slot=1>
+<script>window.parent.DOM_o.enableLink__v('prism_css')</script>
+
+<script>window.parent.DOM_o.enableLink__v('lib_prism')</script>
+
+<script>window.parent.DOM_o.enableScript__v('prism_js', true )</script>
+
+<hgroup data--="code_ref">
+<h5><a href="https://github.com/octoxalis/typexjs/blob/master/source/matrix/assets/scripts/js/parts/_dom_.js" target="_blank">typexjs/source/matrix/assets/scripts/js/parts/_dom_.js</a></h5>
+<h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
+</hgroup>
+<pre><code class="language-javascript">
+const DOM_siblings__a = selector_s =>
+{
+  const node_e = document.querySelector( selector_s )
+  return !node_e ?
+    null :
+    Array.prototype.filter
+      .call( node_e.parentNode.children, sibling_e => sibling_e !== node_e )
+}
+<br/>
+const DOM_listReverse__v = selector_s =>
+{
+  const node_a = Array.prototype.slice.call(document.querySelectorAll( `${selector_s} li` ))
+  node_a.forEach( node_e => node_e.parentNode.insertBefore( node_e, node_e.parentNode.firstChild ) )
+}
+</code></pre>
+<p>The previous code shows an <strong>exception</strong> to the specifiers convention used by <strong>TypexJS</strong>: for <code>DOM</code> elements, it seems more appropriate to use the <code>_e</code> suffix
+<ins data--="note_txt"><sup></sup><span data--="note_content">for <em>element</em>, because the _<em>N</em> suffix is already used for a <code>Null</code> value
+</span></ins>than the <code>_o</code> suffix used for <code>Object</code>.</p>
+<p>The example code shows another singularity: we can instantly differenciate JavaScript and browser specific functions or methods from our own code functions and methods.
+Our identifiers have a letter suffix where JS and browser identifiers have nothing. Therefore, we can safely use exactly the same names:</p>
+<p data--="example"><code>const myWindow = window</code><br>
+<code>const window_o = window    // smarter isn't it?</code></p>
+<p>Hence, everytime we want to override some JavaScript or DOM function
+<ins data--="note_txt"><sup></sup><span data--="note_content">or any browser specific, third-party library function, etc.
+</span></ins>, we can safely do it while keeping a semantic coherency with the original function.</p>
+<div>

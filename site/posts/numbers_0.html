@@ -1,0 +1,58 @@
+<div data-slot=0>
+<script>window.parent.DOM_o.enableLink__v('lib_table')</script>
+
+<p>Defining different kinds of numbers for a more precise mapping of types can be a necessity
+<ins data--="note_txt"><sup></sup><span data--="note_content">JavaScript has a unique type <em>Number</em> covering both integer and float numbers
+</span></ins>. For instance, a perfect mapping with WebAssembly number types can be very useful for a JavaScript module interacting with a Wasm module.
+Therefore, <strong>TypexJS</strong> defines a few subsidiary types:</p>
+<ul data--="ulist">
+<li>32-bit integer</li>
+<li>64-bit integer</li>
+<li>128-bit integer (BigInt)</li>
+<li>32-bit float</li>
+<li>64-bit float</li>
+</ul>
+<table class="half_width">
+<thead>
+<tr>
+<th>Type</th>
+<th style="text-align:center">Suffix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32-bit integer</td>
+<td style="text-align:center">_<em>i</em></td>
+</tr>
+<tr>
+<td>64-bit integer</td>
+<td style="text-align:center">_<em>i1</em></td>
+</tr>
+<tr>
+<td>128-bit integer</td>
+<td style="text-align:center">_<em>i2</em></td>
+</tr>
+<tr>
+<td>32-bit float</td>
+<td style="text-align:center">_<em>f</em></td>
+</tr>
+<tr>
+<td>64-bit float</td>
+<td style="text-align:center">_<em>f1</em></td>
+</tr>
+</tbody>
+</table>
+<p>These specifiers use one letter, either <em>i</em> or <em>f</em>
+<ins data--="note_txt"><sup></sup><span data--="note_content"><em>i</em> for an integer number<br>
+<em>f</em> for a float number
+</span></ins>, and eventualy append a number <em>1</em> or <em>2</em>
+<ins data--="note_txt"><sup></sup><span data--="note_content"><em>1</em> for a 64-bit number<br>
+<em>2</em> for a 128-bit number
+</span></ins>for the number width in bits.</p>
+<p>To memorize easily those number specifiers, one has to think that numbers are at least 32-bit wide
+and the number appended after the specifier letter means: left shift 32 (bits) by 1 or 2.
+<ins data--="note_txt"><sup></sup><span data--="note_content"><code>64 = 32 &lt;&lt; 1</code><br>
+<code>128 = 32 &lt;&lt; 2</code><br>
+for the sake of brevity, there is no <em>0</em> after the letter (<em>i</em> or <em>f</em>) for 32-bit number types
+</span></ins>.</p>
+<div>

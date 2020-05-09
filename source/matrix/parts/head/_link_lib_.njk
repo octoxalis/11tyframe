@@ -1,0 +1,8 @@
+{% set _link %}
+<link href="{{ U_o.url_s }}assets/styles/css/lib.min.css"
+      rel="stylesheet">
+{% endset %}
+
+{% if U_o.dev_b === true %}{{ _link | safe }}
+{% else %}{{ _link | minify_html | safe }}
+{% endif %}

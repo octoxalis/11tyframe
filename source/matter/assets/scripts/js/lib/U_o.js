@@ -6,7 +6,7 @@ const A_o = require( './A_o.js' )
 
 const U_o =
 {
-  //dev_b: true,     //: development/production switch
+  //dev_b: true,   //: development/production switch
   dev_b: false,
   url_s: null,
 
@@ -15,8 +15,9 @@ const U_o =
 
   GIT_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/`,
   GIT_SRC_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/blob/master/`,
+  GIT_ISSUES_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/issues`,
   //xx TWI_s: `https://twitter.com/${A_o.ID_s}/`,
-  RSS_s: `${A_o.URL_s}feed.xml`,
+  //XX RSS_s: `${A_o.URL_s}feed.xml`,
   SERVICE_PATH_s: 'assets/scripts/js/service_worker.min.js',
 
   HOME_s:    `[Home page]: ${A_o.URL_s}`,
@@ -24,13 +25,17 @@ const U_o =
   NETLIFY_s: `https://www.netlify.com`,
   NODE_s :   `[Node.js]: https://nodejs.org`,
 
-  FRAME_s:     '11ty Frame',
-  FRAME_URL_s: `https://11tyframe.netlify.com/`,
-
-  OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',
+  //--OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',
+  OUTLINK_s: '{target="_blank"}',    //: --> headers
 
 }
-void function () { U_o.url_s = U_o[U_o.dev_b === true ? 'DEV_s' : 'PRO_s'] } ()
-console.log( `Site URL: ${U_o.url_s}` )
+
+
+
+void function ()
+{
+  U_o.url_s = U_o[U_o.dev_b === true ? 'DEV_s' : 'PRO_s']
+  console.log( `Site URL: ${U_o.url_s}` )
+} ()
 
 module.exports = U_o

@@ -1,0 +1,26 @@
+{% set _js %}
+{% include "./parts/perf_api/helpers/dom.js" %}
+{% include "./parts/perf_api/helpers/helpers.js" %}
+{% include "./parts/perf_api/data.js" %}
+
+{% include "./parts/perf_api/helpers/svg.js" %}
+{% include "./parts/perf_api/helpers/waterfall.js" %}
+{% include "./parts/perf_api/helpers/pieChartHelpers.js" %}
+{% include "./parts/perf_api/components/pieChart.js" %}
+{% include "./parts/perf_api/components/summaryTiles.js" %}
+{% include "./parts/perf_api/components/navigationTimeline.js" %}
+{% include "./parts/perf_api/components/resourcesTimeline.js" %}
+{% include "./parts/perf_api/components/pageMetric.js" %}
+{% include "./parts/perf_api/components/legend.js" %}
+
+{% include "./parts/perf_api/components/table.js" %}
+{% include "./parts/perf_api/helpers/persistance.js" %}
+{% include "./parts/perf_api/logger.js" %}
+
+{% include "./parts/perf_api/helpers/iFrameHolder.js" %}
+{% include "./parts/perf_api/init.js" %}
+
+{% endset %}
+{% if U_o.dev_b === true %}{{ _js | safe }}
+{% else %}{{ _js | minify_js | safe }}
+{% endif %}

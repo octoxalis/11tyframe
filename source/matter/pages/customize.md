@@ -6,13 +6,15 @@
   tags:      [ `post` ],
 
   eleventyExcludeFromCollections: false,
-  no_comments: true,
 
   rank_n:     2,
   title_s:    `Customize your new site`,
   subtitle_s: `Modify your new site skin`,
   abstract_s: `Easily change colors and luminosity mode (light or dark)`,
   author_s:   `Me`,
+
+  //XX no_comment: true,
+  sitemap_b: true,
 }
 ---
 [comment]: # (======== Post ========)
@@ -24,6 +26,10 @@ Some options let you modify the skin of your blog.{ data--="page_intro" }
 ## Configure according to your preferences
 {% end_anchor %}
 
+<slot-slice>
+<slot-css prism_css/>
+<slot-css lib_prism/>
+<slot-js prism_js/>
 
 At the root of the source directory there is a `configure.js` file that you can tweak as you see fit.
 
@@ -71,9 +77,9 @@ All {{A_o.NAME_s}} colors are defined by CSS custom properties and the _HUE_ pro
 + **L** links color;
 + **S** secondary color;
 + **I** important color
-{% _short_note %}
+{% _note_txt %}
 something outstanding in your content
-{% end_short_note %}
+{% end_note_txt %}
 
 + **D** decorative color.
 
@@ -87,41 +93,43 @@ HUE_L_n: 50,
 {data--="example"}
 
 this declaration will yield a link color of `203` for anchors
-{% _short_note %}
+{% _note_txt %}
 `153 + 50 = 203`
-{% end_short_note %}
+{% end_note_txt %}
 . Similarly, the _secondary_ color (`HUE_S_n`) will be `103`
-{% _short_note %}
+{% _note_txt %}
 `153 - 50 = 103`
-{% end_short_note %}
+{% end_note_txt %}
 but you could have well define that property as:
 
 HUE_S_n: -30,
 {data--="example"}
 
 to obtain `123` as _secondary_ color hue
-{% _short_note %}
+{% _note_txt %}
 `153 - 30 = 123`
-{% end_short_note %}
+{% end_note_txt %}
 . Nothing requires you to have simetrical values for your color variations, you only have to experiment some combinations to get what you consider the optimal result.
 
 All variations once defined, any visitor of your site will be able to change the base color hue with a single click over the page header, selecting one of the 360 different hues available in the HSL color system used by {{A_o.NAME_s}}. Nevertheless, if you want to prevent the possiblity to change this base color hue, you can do it by setting the `HUE_SET_n` to `0` in the `configure.js` file.
 
+</slot-slice>
 
 {% _anchor %}
 ## Luminosity variations AKA dark and light modes
 {% end_anchor %}
 
+<slot-slice>
 
 Having dark (and light) mode is trendy: {{A_o.NAME_s}} has it, automatically and akin to your color palette!
 
 And even more: you can define the level of contrast between dark and light mode thanks to the `LUM_CONTRAST_n` property. It defaults to `40` and should be kept between `30` and `49` for Web Content Accessibility Guidelines ([WCAG]) 2.0 conformance
-{% _short_note %}
+{% _note_txt %}
 under 30 you won't a get a score of 100 when auditing your blog with _Lighthouse_ in Chrome DevTools [accessibility panel]{{U_o.OUTLINK_s}}.
-{% end_short_note %}
+{% end_note_txt %}
 .
 
-
+</slot-slice>
 
 [comment]: # (======== Links ========)
 

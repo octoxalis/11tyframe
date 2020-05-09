@@ -1,0 +1,17 @@
+{% set _path = '../../assets/styles/css/parts/' %}
+
+{% set _css %}
+{% include _path + "_root_var_.css" %}
+{% include _path + "_root_color_.css" %}
+{% include _path + "_root_font_.css" %}
+{% include _path + "_fouc_0_.css" %}
+{% include _path + "_font_.css" %}
+{% include _path + "_tags_.css" %}
+{% include _path + "_components_.css" %}
+{% endset %}
+
+<style data--="inline_style" type="text/css">
+{% if U_o.dev_b === true %}{{ _css | safe }}
+{% else %}{{ _css | minify_css | safe }}
+{% endif %}
+</style>

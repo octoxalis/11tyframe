@@ -1,0 +1,122 @@
+html                  {box-sizing:border-box}
+*, *:before, *:after  {box-sizing:border-box}
+
+
+[hidden],
+template    {display:none;}
+
+
+
+pre > code    {display:block}
+
+body          {display:grid; place-items:center;}
+
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+dl, ul, ol    {margin:0;padding:0}
+
+hr    {margin-top: 0;}
+
+dd    {margin-left: 0;}
+
+
+
+hr,
+button, input, select, textarea, fieldset,
+embed, object, iframe    {border: 0;}
+
+
+
+a,
+legend    {color: inherit;}
+
+
+
+a    {text-decoration: none;}
+
+
+
+button, select    {text-transform: none;}
+
+
+
+dl, ol, ul    {list-style: none;}
+
+
+
+button,
+[type='button'], [type='reset'], [type='submit']    {cursor: pointer;}
+
+button[disabled],
+[type='button'][disabled], [type='reset'][disabled], [type='submit'][disabled]    {cursor: default;}
+
+
+
+*
+{
+  scrollbar-width: thin;
+  scrollbar-color: var(--c_decor_hi) var(--c_decor);
+}
+*::-webkit-scrollbar    {width: .75em}
+
+*::-webkit-scrollbar-track    {background: var(--c_decor);}
+*::-webkit-scrollbar-thumb
+{
+  background-color: var(--c_decor_hi);
+  border: .2em solid var(--c_decor);
+  border-radius: 20px;
+}
+
+
+
+/* =========== CUSTOM =========== */
+
+
+h2, h3    {margin-bottom: .5rem}
+h2        {margin-top: 2rem}
+h3        {margin-top: 1.5rem}
+
+
+
+section > p,
+section > footer,
+section > table,
+section > ol,
+section > ul    {max-width: var(--line_width);}
+
+body    {overflow-x: hidden}
+
+pre    {overflow-y: hidden}
+
+
+p > code,
+pre > code    {white-space: pre}
+
+
+a::before,
+a::after
+{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--c_link_hi);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+a::before    {height: 1px}
+a::after     {height: 4px;transform: scaleX(0)}
+
+a:hover::after    {transform: scaleX(1);}
+
+
+
+hr
+{
+  width: calc( var(--BODY_WIDTH) * .1 );
+  border-top: 1px solid var(--c_prim_lo);
+  margin: 1.8rem 0 2.5rem;
+}

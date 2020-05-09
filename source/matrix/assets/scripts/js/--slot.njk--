@@ -1,0 +1,7 @@
+{% set _js %}
+{#% include "./parts/_idler_.js" %#}
+{% include "./parts/_slot_.js" %}
+{% endset %}
+{% if U_o.dev_b === true %}{{ _js | safe }}
+{% else %}{{ _js | minify_js | safe }}
+{% endif %}

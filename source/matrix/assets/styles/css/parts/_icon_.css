@@ -1,0 +1,32 @@
+.svg_icon,
+.svg_icon_hi
+{
+  width:  var(--svg_icon_dim);
+  height: var(--svg_icon_dim);
+}
+
+
+.svg_icon_hi
+{
+  padding: .5em;
+  border-radius: .5em;
+  box-shadow: var(--BOX_SHADOW);
+}
+
+.svg_icon:hover,
+.svg_icon_hi:hover
+{
+  filter: brightness(5) contrast(5);
+}
+
+/*
+.use_icon
+{
+  stroke: var(--c_icon);
+  stroke-width: 2px;
+  stroke-linecap:  round;
+  stroke-linejoin: round;
+  fill: none;
+  background: transparent;
+}
+*/

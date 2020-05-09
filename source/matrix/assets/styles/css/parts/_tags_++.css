@@ -1,0 +1,190 @@
+html
+{
+  line-height: 1.15; /* Correct the line height in all browsers */
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+  -webkit-tap-highlight-color: transparent; /* Remove gray overlay on links for iOS */
+
+  --base_u: 8;
+  --font_min: calc( var(--base_u) * 2 );
+  --font_max: calc( var(--base_u) * 3 );
+  --screen_min: 400;
+  --screen_max: 1600;
+
+  font-size: calc( (var(--font_min) * 1px)
+  + ( var(--font_max) - var(--font_min) )
+  * ( 100vw - (var(--screen_min) * 1px) )
+  / ( var(--screen_max) - var(--screen_min) ) );
+}
+
+
+
+body
+{
+  background: {background:transparent;}/*var(--c_back_lo);*/
+}
+
+
+
+h1    /* Title */
+{
+  /*...margin-top: 4rem;*/
+}
+
+
+
+h2,
+h3
+{
+  /*...margin-bottom: .5rem;*/
+}
+
+
+
+h2    /* Section */
+{
+  /*...margin-top: 2rem;*/
+  /*...border-bottom: .1rem solid var(--c_decor);*/
+  line-height: .7;
+}
+
+
+
+h3    /* Subsection */
+{
+  /*...margin-top: 2rem;*/
+  font-size: calc( var(--font_u)  * 1.2 );
+}
+
+
+
+nav    {background:transparent;}/*{background: var(--c_back);}*/
+
+
+
+section > p,
+section > footer,
+section > table,
+section > ol,
+section > ul    {max-width: var(--line_width);}
+
+
+
+pre
+{
+  background: transparent;
+  /*...border-left: var(--BORDER_2) solid var(--c_decor_hi);*/
+  overflow-y: hidden;
+}
+
+
+
+code
+{
+  /*...padding: .2rem .5rem;*/
+  font-family: var(--font_mono);
+}
+
+
+
+pre > code
+{
+  white-space: pre;
+}
+
+
+
+p > code
+{
+  font-size: inherit;
+  white-space: pre;
+}
+
+
+
+blockquote
+{
+  /*margin-left: 0;
+  margin-right: 0;*/
+  /*...
+  padding: 1rem 1.5rem;
+  border-left: var(--BORDER_2) solid var(--c_sec_hi);
+  */
+}
+
+
+
+blockquote *:last-child    {margin-bottom: 0;}
+
+
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul
+{
+  /*...margin: .5rem 0 .5rem 1rem;*/
+  font-size: var(--font_u);
+}
+
+
+/*...
+dd,
+dt,
+li    {margin-bottom: 1.0rem;}
+*/
+
+
+
+b, strong    {font-weight: bold;}
+
+
+
+a    {position: relative;}
+a::before,
+a::after
+{
+  content: '';
+  position: absolute;
+  bottom: .3rem;
+  left: 0;
+  right: 0;
+  background-color: transparent;/*var(--c_link_hi);*/
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+a::before    {height: 1px;}
+a::after
+{
+  height: 4px;
+  transform: scaleX(0);
+}
+a:hover::after    {transform: scaleX(1);}
+a:focus,
+a:hover    {color: var(--c_link);}
+
+
+
+/*....
+p,
+dl, ol, ul,
+blockquote    {margin-top: 1.5rem;}
+*/
+
+
+
+/*....
+pre    {margin-bottom: 1rem;}
+*/
+
+
+
+hr
+{
+  border-top: var(--BORDER_1) solid var(--c_decor);
+  /*margin: 3rem 0 2rem 0;*/
+}

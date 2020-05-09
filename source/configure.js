@@ -4,22 +4,22 @@
 
 module.exports =
 {
-  AUTHOR_s:     'octoxalis',                       //: github name
-  EMAIL_s:      'octoxalis@gmail.com',             //: github e-mail
-  ID_s:         '11tyframe',                       //: github repository
-  NAME_s:       '11ty Frame',                      //: site name
-  URL_s:        `https://11tyframe.netlify.com/`,  //: CDN deployer
-  LOCAL_s:      'http://127.0.0.1:5500/',          //: local address and port for development
-  COLLECTION_s: 'post',                            //: Eleventy tag for posts collection
-  LANGUAGE_s:   'en',                              //: Site language
-
-  description_o:                                   //: descriptions for SEO
+  AUTHOR_s     : 'octoxalis',                       //: github name
+  EMAIL_s      : 'octoxalis@gmail.com',             //: github e-mail
+  ID_s         : 'typexjs',                         //: github repository
+  NAME_s       : 'TypexJS',                         //: site name
+  URL_s        : `https://typexjs.netlify.app/`,    //: CDN deployer
+  LOCAL_s      : 'http://127.0.0.1:8080/',          //: local address and port for development
+  COLLECTION_s : 'post',                            //: Eleventy tag for posts collection
+  LANGUAGE_s:    'en',                              //: Site language
+  
+  description_o:                                    //: descriptions for SEO
   {
-    DESCRIPT_s: '11ty Frame blog',
-    GLOBAL_s:   'Eleventy,static site generator',
+    DESCRIPT_s: 'TypexJS blog',
+    GLOBAL_s:   'JavaScript,type,naming,scheme,suffix',
   },
 
-  HUE_P_n: 0,        //: theme primary color in range [0...359]
+  HUE_P_n: 210,      //: theme primary color in range [0...359]
   HUE_L_n: 50,       //: theme link color offset from primary color
   HUE_S_n: -50,      //: theme secondary color offset from primary color
   HUE_I_n: 20,       //: theme important color offset from primary color

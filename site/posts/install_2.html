@@ -1,0 +1,33 @@
+<div data-slot=2>
+<script>window.parent.DOM_o.enableLink__v('prism_css')</script>
+
+<script>window.parent.DOM_o.enableLink__v('lib_prism')</script>
+
+<script>window.parent.DOM_o.enableScript__v('prism_js', true )</script>
+
+<p>If you want to have comments on some or all of your blog pages, you have to configure TypexJS commenting system: <a href="https://github.com/utterance/utterances" target="_blank">utteranc.es</a>. All you have to do is to follow utterances site <a href="https://utteranc.es" target="_blank">instructions</a>.</p>
+<p>If you don’t want to have comments on any page, just add a property <code>no_comments</code> in its frontmatter section: here is what this <code>install</code> page source does, just <em>commenting out</em> (sic) the <code>no_comments</code> property.</p>
+<hgroup data--="code_ref">
+<h5><a href="https://github.com/octoxalis/typexjs/blob/master/source/matter/pages/install.md" target="_blank">typexjs/source/matter/pages/install.md</a></h5>
+<h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
+</hgroup>
+<pre><code class="language-javascript">
+---js
+{
+  date:      `2019-11-01`,
+  layout:    `frame.njk`,
+  permalink: `install.html`,
+  tags:      [ `post` ],
+<br/>
+  eleventyExcludeFromCollections: false,
+  no_comments: true,    //: there will be no comments for this page!
+<br/>
+  title_s:    `Install 11ty Frame`,
+  subtitle_s: `How to install your 11ty Frame blog`,
+  abstract_s: `Follow these instructions`,
+  author_s:   `Me`,
+}
+---
+<br/>
+</code></pre>
+<div>

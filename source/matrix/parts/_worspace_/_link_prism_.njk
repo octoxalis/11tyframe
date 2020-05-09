@@ -1,0 +1,14 @@
+{% set _link %}
+<link id="prism"
+      href="{{ U_o.url_s }}assets/styles/css/prism.min.css"
+      as="style"
+      rel="preload">
+<link id="lib_prism"
+      href="{{ U_o.url_s }}assets/styles/css/lib_prism.min.css"
+      as="style"
+      rel="preload">
+{% endset %}
+
+{% if U_o.dev_b === true %}{{ _link | safe }}
+{% else %}{{ _link | minify_html | safe }}
+{% endif %}

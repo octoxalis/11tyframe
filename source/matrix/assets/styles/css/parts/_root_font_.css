@@ -1,0 +1,20 @@
+:root
+{
+  --base_u: 8;
+  --base_min: 1.6;
+  --font_base: calc( var(--base_u) * var(--base_min) );
+  --font_min: var(--font_base);
+  --font_max: calc( var(--font_base) * 1.5 );
+  --screen_min: 400;
+  --screen_max: 1600;
+  --font_size: calc( (var(--font_min) * 1px)
+  + ( var(--font_max) - var(--font_min) )
+  * ( 100vw - (var(--screen_min) * 1px) )
+  / ( var(--screen_max) - var(--screen_min) ) );
+  --font_u: var(--font_size) * 1;  /* font unit - can be adjusted */
+
+  --font_title: system-ui, sans-serif;
+  --font_body:  system-ui, sans-serif;
+  --font_mono:  system-ui, monospace;
+  --line_width: var(--LINE_WIDTH);
+}

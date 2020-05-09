@@ -1,6 +1,6 @@
 ---js
 {
-  date:      `2019-12-12`,
+  date: `2020-04-20`,
   layout:    `offline.njk`,
   permalink: `offline.html`,
   tags:      [ `notag` ],
@@ -9,7 +9,8 @@
   title_s:    `No Internet connection!`,
   abstract_s: `No Internet connection!`,
 
-  no_comments: true,
+  no_comment: true,
+  sitemap_b: true,
 }
 ---
 [comment]: # (======== Post ========)
@@ -17,7 +18,7 @@
 
 You are not connected to Internet and the page you requested is not cached!
 
-### You better go back to {{ A_o.ID_s }} [Home page]
+## You better go back to {{ A_o.ID_s }} [Home page]
 
 
 [comment]: # (======== Links ========)

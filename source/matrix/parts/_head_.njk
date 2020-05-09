@@ -1,3 +1,9 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title_s or metadata.title }}</title>
+{#<head>#}
+{% include "parts/head/_title_.njk" %}
+{% include "parts/head/_site_url_.njk" %}
+{% include "parts/head/_seo_.njk" %}
+{% include "parts/head/_description_.njk" %}
+{% include "parts/head/_favicon_.njk" %}
+{% include "parts/head/_inline_style_.njk" %}
+{% include "parts/head/_link_lib_.njk" %}
+{#</head>#}

@@ -1,0 +1,41 @@
+<div data-slot=1>
+<script>window.parent.DOM_o.enableLink__v('prism_css')</script>
+
+<script>window.parent.DOM_o.enableLink__v('lib_prism')</script>
+
+<script>window.parent.DOM_o.enableScript__v('prism_js', true )</script>
+
+<p>Once installed and deployed
+<ins data--="note_txt"><sup></sup><span data--="note_content">Using Netlify is the easiest way, but any alternative is as simple.
+</span></ins>, you have to modify the entries found in the <code>configure.js</code> file located at the root of your source directory
+<ins data--="note_txt"><sup></sup><span data--="note_content">the <code>AUTHOR_s</code> and <code>EMAIL_s</code> properties are slightly different in the <code>configure.js</code> file, but it’s because the TypexJS demo site requires real initial values.
+</span></ins>.</p>
+<hgroup data--="code_ref">
+<h5><a href="https://github.com/octoxalis/typexjs/blob/master/source/configure.js" target="_blank">typexjs/source/configure.js</a></h5>
+<h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
+</hgroup>
+<pre><code class="language-javascript">
+AUTHOR_s     : 'yourname',                        //: Your github name
+EMAIL_s      : 'yourname@yourmail.com',           //: Your github e-mail
+ID_s         : '11tyframe',                       //: Your github repository
+NAME_s       : '11ty Frame',                      //: Your site name
+URL_s        : `https://11tyframe.netlify.com/`,  //: Your CDN site address
+LOCAL_s      : 'http://127.0.0.1:5500/',          //: Your local address and port for development
+COLLECTION_s : 'post',                            //: The Eleventy tag for your posts collection
+LANGUAGE_s   : 'en',                              //: Site language
+<br/>
+description_o:                                    //: descriptions for SEO
+{
+  DESCRIPT_s: '11ty Frame blog',
+  GLOBAL_s:   'Eleventy,static site generator',
+},
+<br/>
+</code></pre>
+<p>Once you have completed this step, you just have to rebuilt your site with this command:
+<ins data--="note_txt"><sup></sup><span data--="note_content">from your typexjs <code>source</code> directory.
+</span></ins></p>
+<p data--="example">npx eleventy --config=make/11ty/make.js</p>
+<p>Then, begin to write your first posts
+<ins data--="note_txt"><sup></sup><span data--="note_content">probably replacing the <code>index.md</code> and <code>install.md</code> files in the <code>matter/pages</code> directory…
+</span></ins>! For thurther help, please refer to the <strong><a href="https://11tytips.netlify.com" target="_blank">11tyTips</a></strong> site which is the model of your fresh new site.</p>
+<div>

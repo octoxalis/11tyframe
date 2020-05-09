@@ -1,0 +1,6 @@
+---js
+{
+  layout:    `assets/styles/css/lib_code.njk`,
+  permalink: `assets/styles/css/lib_code.min.css`,
+}
+---

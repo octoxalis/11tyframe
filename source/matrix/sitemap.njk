@@ -4,7 +4,7 @@
 
 {%- set _template_s %}
 <?xml version='1.0' encoding='utf-8'?>
-{% include "parts/blocks/_sitemap_.njk" %}
+{% include "parts/_sitemap_.njk" %}
 {% endset -%}
 
 {{- _template_s | safe | template_end( data_o ) | minify_html -}}{# post process #}

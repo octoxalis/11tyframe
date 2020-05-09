@@ -1,0 +1,68 @@
+<div data-slot=0>
+<script>window.parent.DOM_o.enableLink__v('prism_css')</script>
+
+<script>window.parent.DOM_o.enableLink__v('lib_prism')</script>
+
+<script>window.parent.DOM_o.enableScript__v('prism_js', true )</script>
+
+<p>At the root of the source directory there is a <code>configure.js</code> file that you can tweak as you see fit.</p>
+<hgroup data--="code_ref">
+<h5><a href="https://github.com/octoxalis/typexjs/blob/master/source/configures.js" target="_blank">typexjs/source/configures.js</a></h5>
+<h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
+</hgroup>
+<pre><code class="language-javascript">
+module.exports =
+{
+  AUTHOR_s:     'octoxalis',                       //: github name
+  EMAIL_s:      'octoxalis@gmail.com',             //: github e-mail
+  ID_s:         '11tyframe',                       //: github repository
+  NAME_s:       '11ty Frame',                      //: site name
+  URL_s:        `https://11tyframe.netlify.com/`,  //: CDN deployer
+  LOCAL_s:      'http://127.0.0.1:5500/',          //: local address and port for development
+  COLLECTION_s: 'post',                            //: Eleventy tag for posts collection
+  LANGUAGE_s:   'en',                              //: Site language
+<br/>
+  description_o:                                   //: descriptions for SEO
+  {
+    DESCRIPT_s: '11ty Frame blog',
+    GLOBAL_s:   'Eleventy,static site generator',
+  },
+<br/>
+  HUE_P_n: 0,        //: theme primary color in range [0...359]
+  HUE_L_n: 50,       //: theme link color offset from primary color
+  HUE_S_n: -50,      //: theme secondary color offset from primary color
+  HUE_I_n: 20,       //: theme important color offset from primary color
+  HUE_D_n: -20,      //: theme decorative color offset from primary color
+<br/>
+  LUM_MODE_n:     1,   //: luminosity mode: 1 (light) || -1 (dark)
+  LUM_CONTRAST_n: 40,  //: luminosity contrast in range [30...49] (30 is less contrast than 49)
+                       //: see https://www.w3.org/TR/WCAG20/ §1.4.1 compliance
+}
+<br/>
+</code></pre>
+<p>The properties of this configuration file are self-documenting but some of them need a few explanations, notably those properties whose names begin by <em>HUE</em> and <em>LUM</em>.</p>
+<p>All TypexJS colors are defined by CSS custom properties and the <em>HUE</em> properties define the variations of these colors:</p>
+<ul data--="ulist">
+<li><strong>P</strong> stands for primary color;</li>
+<li><strong>L</strong> links color;</li>
+<li><strong>S</strong> secondary color;</li>
+<li><strong>I</strong> important color
+<ins data--="note_txt"><sup></sup><span data--="note_content">something outstanding in your content
+</span></ins></li>
+<li><strong>D</strong> decorative color.</li>
+</ul>
+<p>These properties values are numbers, positive and negative, specifying the variation around the <em>primary</em> color (<code>HUE_P_n</code>) value that you declare.
+For instance, if you set:</p>
+<p data--="example">HUE_P_n: 153,<br/>
+HUE_L_n: 50,</p>
+<p>this declaration will yield a link color of <code>203</code> for anchors
+<ins data--="note_txt"><sup></sup><span data--="note_content"><code>153 + 50 = 203</code>
+</span></ins>. Similarly, the <em>secondary</em> color (<code>HUE_S_n</code>) will be <code>103</code>
+<ins data--="note_txt"><sup></sup><span data--="note_content"><code>153 - 50 = 103</code>
+</span></ins>but you could have well define that property as:</p>
+<p data--="example">HUE_S_n: -30,</p>
+<p>to obtain <code>123</code> as <em>secondary</em> color hue
+<ins data--="note_txt"><sup></sup><span data--="note_content"><code>153 - 30 = 123</code>
+</span></ins>. Nothing requires you to have simetrical values for your color variations, you only have to experiment some combinations to get what you consider the optimal result.</p>
+<p>All variations once defined, any visitor of your site will be able to change the base color hue with a single click over the page header, selecting one of the 360 different hues available in the HSL color system used by TypexJS. Nevertheless, if you want to prevent the possiblity to change this base color hue, you can do it by setting the <code>HUE_SET_n</code> to <code>0</code> in the <code>configure.js</code> file.</p>
+<div>

@@ -1,0 +1,9 @@
+<body>
+{% include "parts/body/_header_.njk" %}
+{% include "parts/body/_article_.njk" %}
+{#% include "parts/body/_footer_.njk" %#}
+{% include "parts/body/_svg_inline_.njk" %}
+{% include "parts/body/_script_.njk" %}
+{% if U_o.dev_b === false %}{% include "parts/body/_instant_page_.njk" %}{% endif %}
+{% include "parts/body/_fouc_1_.njk" %}
+</body>

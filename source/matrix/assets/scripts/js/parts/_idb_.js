@@ -1,5 +1,10 @@
 class KVIdb
 {
+  //idb_o
+  //ready_o
+
+
+
   constructor ( db_s='kv_db', store_s='kv_store', version_n=1 )
   {
     this.idb_o     = null
@@ -10,6 +15,8 @@ class KVIdb
 
     this.init__v()
   }
+
+
 
   init__v ()
   {
@@ -33,12 +40,16 @@ class KVIdb
     })
   }
 
+
+
   store__o ( mode_s='readonly' )
   {
     return this.idb_o
       .transaction( [ this.store_s ], mode_s )
       .objectStore( this.store_s )
   }
+
+
 
   set__v ( key_s, value_ )
   {
@@ -55,6 +66,8 @@ class KVIdb
         })
       })
   }
+
+
 
   update__v ( key_s, property, value_ )
   {
@@ -81,6 +94,8 @@ class KVIdb
       })
   }
 
+
+
   walk__v ( callback_f )
   {
     return this.ready_o
@@ -105,6 +120,8 @@ class KVIdb
       })
   }
 
+
+
   get__ ( key_s )    //: anytyped value_
   {
     return this.ready_o
@@ -121,6 +138,8 @@ class KVIdb
       })
   }
 
+
+
   key__b ( key_s )    //: return 1 for true : 0 for false
   {
     return this.ready_o
@@ -136,6 +155,8 @@ class KVIdb
         })
       })
   }
+
+
 
   last__ ()
   {
@@ -155,6 +176,8 @@ class KVIdb
         })
       })
   }
+
+
 
   deleteAll__v ( callback_f )
   {
@@ -184,6 +207,8 @@ class KVIdb
       })
   }
 
+
+
   delete__v ( key_s )
   {
     return this.ready_o
@@ -199,6 +224,8 @@ class KVIdb
         })
       })
   }
+
+
 
   clear__v ()
   {
@@ -216,6 +243,8 @@ class KVIdb
       })
   }
 
+
+  
   deleteIDB__v ()
   {
     window.indexedDB.deleteDatabase( this.idb_s )

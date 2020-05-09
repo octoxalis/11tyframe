@@ -1,8 +1,11 @@
-const STRING_o = require( './string.js' )
+const SLOT_o = require( './slot.js' )
+//?? const HEADER_o = require( './header.js' )
 
 let files_a       = null
 let count_n       = 0
 let current_n     = 0
+
+
 
 void function ()
 {
@@ -13,15 +16,20 @@ void function ()
 } ()
 
 
+
 const buildStart__v = data_o =>
 {
   console.log( `${count_n} Markdown files to process` )
 }
 
+
+
 const buildEnd__v = data_o =>
 {
   //... what else?
 }
+
+
 
 const templateStart__s = ( input_s, data_o ) =>
 {
@@ -30,6 +38,8 @@ const templateStart__s = ( input_s, data_o ) =>
   return start_s
 }
 
+
+
 const templateEnd__s = ( input_s, data_o ) =>
 {
   let end_s = input_s
@@ -37,19 +47,27 @@ const templateEnd__s = ( input_s, data_o ) =>
   return end_s
 }
 
+
+
 const headEnd__s = ( input_s, data_o ) =>
 {
-  let head_s = input_s
+  //... HEADER_o.insertJS__s( HEADER_o.insertCSS__s( input_s, data_o ), data_o )
+  let end_s = input_s
   //... what else?
-  return head_s
+  return end_s
 }
+
+
 
 const bodyEnd__s = ( input_s, data_o ) =>
 {
-  let body_s = input_s
-  //... what else?
+  //... CSS + JS load list ...
+  //---console.log( `==========================\n${input_s}\n` )
+  let body_s = SLOT_o.extract__s( input_s, data_o )
   return body_s
 }
+
+
 
 module.exports =
 {
@@ -60,9 +78,15 @@ module.exports =
     return start_s
   },
 
+
+
   head__s: ( input_s, data_o ) => headEnd__s( input_s, data_o ),
 
+
+
   body__s: ( input_s, data_o ) => bodyEnd__s( input_s, data_o ),
+
+
 
   end__s: ( input_s, data_o ) =>
   {

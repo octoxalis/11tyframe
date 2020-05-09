@@ -1,0 +1,8 @@
+{% set _css %}
+{% include "./parts/_performance_.css" %}
+{% include "./parts/_perf_api_.css" %}
+{% endset %}
+
+{% if U_o.dev_b === true %}{{ _css | safe }}
+{% else %}{{ _css | minify_css | safe }}
+{% endif %}

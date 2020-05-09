@@ -2,8 +2,8 @@
 */
 :root
 {
-  --h_punctuation: calc( var(--c_hue_p) +  30 );
-  --h_operator:    calc( var(--c_hue_p) +  70 );
+  --h_punctuation: calc( var(--c_hue_p) +  20 );
+  --h_operator:    calc( var(--c_hue_p) +  80 );
   --h_selector:    calc( var(--c_hue_p) + 110 );
   --h_keyword:     calc( var(--c_hue_p) + 150 );
   --h_comment:     calc( var(--c_hue_p) + 190 );
@@ -16,19 +16,31 @@
   --lum: 75%;
 }
 
+
+
+.toolbar-item > button,
+[data--=code_ref],
+[data--=example],
+[data--=example]::before    {  --size_ratio: .9}
+/*  --font_code: 90%;     Fira Code adjustment */
+
+
+
 p > code,
 code[class*=language-],
 pre[class*=language-],
 [data--=note_content] code
 {
-	font-family: 'Fira Code', monospace;
+  font-family: var(--font_mono);
+  font-weight: 400;
 }
 
 code[class*=language-],
 pre[class*=language-]
 {
+  --size_ratio: .9;
+
   color: hsla( var(--c_hue_p), var(--c_sat_lo), 90%, 1 );
-	font-size: 90%;
 }
 
 :not(pre) > code[class*=language-],
@@ -41,10 +53,10 @@ pre[class*=language-]
 [data--=note_content] code,
 p > code
 {
-  color: hsla( var(--c_hue_p), var(--c_sat_lo), var(--c_lum_lo), 1 );
-	background: hsla( var(--c_hue_p), var(--c_sat_lo), var(--c_lum_hi), .5 );
-	font-size: 70%;    /* Fira Code adjustment */
-  border-radius: 4px;
+  --size_ratio: .9;
+
+  padding: 0 var(--PAD_1);
+  background: var(--c_back);
 }
 
 

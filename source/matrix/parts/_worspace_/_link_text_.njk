@@ -1,0 +1,10 @@
+{% set _link %}
+<link id="lib_text"
+      href="{{ U_o.url_s }}assets/styles/css/lib_text.min.css"
+      as="style"
+      rel="preload">
+{% endset %}
+
+{% if U_o.dev_b === true %}{{ _link | safe }}
+{% else %}{{ _link | minify_html | safe }}
+{% endif %}

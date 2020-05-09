@@ -1,0 +1,7 @@
+{% set _svg %}
+{% include "../../assets/icons/_lib_icon_.svg" %}
+{% endset %}
+
+{% if U_o.dev_b === true %}{{ _svg | safe }}
+{% else %}{{ _svg | minify_html | safe }}
+{% endif %}

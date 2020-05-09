@@ -6,14 +6,13 @@ const C_o = require( './C_o.js' )
 
 module.exports =
 {
-  header: attribute_s =>
+  band: attribute_s =>
   {
     let markup_s
     switch ( attribute_s )
     {
-      case 'data-theme':
-        markup_s = `Modify site skin by clicking inside this box:
-          ↕ for luminosity mode${C_o.HUE_SET_n ? ' ↔ for hue color' : ''}`
+      case 'data-skin':
+        markup_s = `Modify site skin by clicking inside this box: ↕ for luminosity mode${C_o.HUE_SET_n ? ' ↔ for hue color' : ''}`
         break;
       default:
         markup_s = ''

@@ -1,39 +1,43 @@
-:root
+*,
+[data--=band_title]:hover::after
 {
-  --font_title: 'Athiti', sans-serif;
-  --font_body:  'Harmattan', sans-serif;
-  --font_mono:  'Fira Code', monospace;
-  --font_code: 90%;    /* Fira Code adjustment */
+  --size_ratio: 1;
+
+  font-size: calc( var(--font_u)  * var(--size_ratio) );
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: .01em;
 }
 
-h1,
-h2,
-h3,
-[data--=header_title]
-  {font-family:var(--font_title)}
 
+
+h1                 {--size_ratio: 1.7}
+h2                 {--size_ratio: 1.4}
+h3                 {--size_ratio: 1.2}
 .note_open,
-[data--=article],
-[data--=link_page],
-[data--=menu],
-[data--=menu_item]
-  {font-family:var(--font_body)}
+.note_open a,
+.note_open code,
+[data--^=link_]    {--size_ratio: .85}
+[data--=band_title]:hover::after,
+small              {--size_ratio: .8}
+sub, sup           {--size_ratio: .75}
 
-.toolbar-item > button,
-[data--=code_ref],
-[data--=example],
-[data--=example]::before
-  {font-size:var(--font_code)}
 
-h1,
-h2,
-h3,
+
+h1, h2, h3,
 [data--=page_intro],
-[data--=example]::before
-  {font-style:italic;}
+[data--=example]::before    {font-weight: 400}
+[data--=link_title]         {font-weight: 600}
+b, strong                   {font-weight: 900}
 
-[data--=header_title]
-  { font-size: 6rem; }
-  
-[data--=header_title]
-  { font-weight: 900; }
+
+
+[data--=page_intro],
+[data--=example]::before    {font-style:italic}
+
+
+
+body                   {font-family:var(--font_body)}
+h1, h2, h3,
+[data--=band_title]    {font-family:var(--font_title)}
+code                   {font-family: var(--font_mono)};

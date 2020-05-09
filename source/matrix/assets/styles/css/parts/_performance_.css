@@ -1,0 +1,8 @@
+[data--=perf]
+{
+  display: inline-block;
+  padding: var(--PAD_1) var(--PAD_2);
+  color: var(--c_prim_lo);
+  background-color: var(--c_back_hi);
+  border-radius: .5em;
+}
