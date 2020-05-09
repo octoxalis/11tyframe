@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Disallow:
 
-Sitemap: https://11tyframe.netlify.com/sitemap.xml
+Sitemap: https://11tyframe.netlify.app/sitemap.xml

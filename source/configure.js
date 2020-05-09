@@ -8,7 +8,7 @@ module.exports =
   EMAIL_s      : 'octoxalis@gmail.com',             //: github e-mail
   ID_s:         '11tyframe',                        //: github repository
   NAME_s:       '11ty Frame',                       //: site name
-  URL_s:        `https://11tyframe.netlify.com/`,   //: CDN deployer
+  URL_s:        `https://11tyframe.netlify.app/`,   //: CDN deployer
   LOCAL_s      : 'http://127.0.0.1:8080/',          //: local address and port for development
   COLLECTION_s : 'post',                            //: Eleventy tag for posts collection
   LANGUAGE_s:    'en',                              //: Site language

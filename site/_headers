@@ -1,9 +1,9 @@
 /*
 Accept-Charset: utf-8
-Expires: Wed Jul 08 2020 17:35:11 GMT+0200 (Central European Summer Time)
-Content-Security-Policy: frame-ancestors 'self';base-uri https://11tyframe.netlify.com/;
+Expires: Wed Jul 08 2020 17:49:37 GMT+0200 (Central European Summer Time)
+Content-Security-Policy: frame-ancestors 'self';base-uri https://11tyframe.netlify.app/;
 X-Frame-Options: SAMEORIGIN
 X-Content-Type-Options: nosniff
 Referrer-Policy: same-origin
 Feature-Policy: fullscreen 'self';midi 'self';notifications 'self';push 'self';sync-xhr 'self';microphone 'self';camera 'self';magnetometer 'self';gyroscope 'self';speaker 'self';vibrate 'self';
-Timing-Allow-Origin: "https://11tyframe.netlify.com/"
+Timing-Allow-Origin: "https://11tyframe.netlify.app/"
