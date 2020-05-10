@@ -1,9 +1,9 @@
 {
-  "name":"{{ A_o.ID_s }}",
-  "short_name":"{{ A_o.ID_s }}",
+  "name":"11tyframe",
+  "short_name":"11tyframe",
   "start_url": "/?source=pwa",
   "scope": "/",
-  "description": "{{ A_o.description_o.DESCRIPT_s }}",
+  "description": "11ty Frame blog",
   "icons": [{ "src": "google-touch-icon.png", "sizes": "512x512" }],
   "theme_color":"#064ec1",
   "background_color":"#ffffff",
