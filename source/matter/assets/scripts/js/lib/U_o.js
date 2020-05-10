@@ -18,7 +18,8 @@ const U_o =
   GIT_ISSUES_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/issues`,
   //xx TWI_s: `https://twitter.com/${A_o.ID_s}/`,
   //XX RSS_s: `${A_o.URL_s}feed.xml`,
-  SERVICE_PATH_s: 'assets/scripts/js/service_worker.min.js',
+  //XX SERVICE_PATH_s: 'assets/scripts/js/service_worker.min.js',
+  SERVICE_PATH_s: 'service_worker.min.js',
 
   HOME_s:    `[Home page]: ${A_o.URL_s}`,
   COMMENT_s: `[utteranc.es]: https://github.com/utterance/utterances`,
