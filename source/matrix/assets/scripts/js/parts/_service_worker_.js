@@ -15,7 +15,6 @@ S_WORKER_o.URL_a = //: URLs of assets to immediately cache
 [
   '{{U_o.url_s}}',
   '{{U_o.url_s}}index.html',
-  '{{U_o.url_s}}manifest.webmanifest',
   '{{U_o.url_s}}offline.html',
   '{{U_o.url_s}}assets/scripts/js/service_worker.min.js',
   '{{U_o.url_s}}assets/scripts/js/lib.min.js',
