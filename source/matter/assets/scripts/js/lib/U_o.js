@@ -26,7 +26,8 @@ const U_o =
   NODE_s :   `[Node.js]: https://nodejs.org`,
 
   //--OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',
-  OUTLINK_s: '{target="_blank"}',    //: --> headers
+  OUTLINK_s: '{target="_blank"}',    //: --> Referrer-Policy header
+
 
 }
 

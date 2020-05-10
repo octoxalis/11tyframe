@@ -59,7 +59,7 @@ see [CoRsa site]{{U_o.OUTLINK_s}}
   - one click smart theming (instantly change colors and light mode)
   - scrolling progress bar
   - navigation links info
-  - code blocks hilighting ([Prism] module), etc.
+  - code blocks hilighting ([Prism]{{U_o.OUTLINK_s}} module), etc.
 { data--="ulist" }
 +  On-request image loading
 {% _note_img [ 'Hi Tux', 'Linux Tux' ] %}
@@ -67,7 +67,7 @@ see [CoRsa site]{{U_o.OUTLINK_s}}
 {% end_note_img %}
 
 + Full Markdown content, styling, linking, etc.
-+ Smart [utteranc.es] commenting system using your own Github repository issues
++ Smart [utteranc.es]{{U_o.OUTLINK_s}} commenting system using your own Github repository issues
 + Extensive **Performance API** metrics report for loading process optimisation
 {% _note_txt %}
 try it by a clicking the [bottom page icon](#perf_header)!
@@ -96,6 +96,5 @@ _That's all Folks!_
 [utteranc.es]: https://github.com/utterance/utterances
 [Node.js]:     https://nodejs.org
 [Prism]:       https://prismjs.com
-[formula]:     https://www.smashingmagazine.com/2016/05/fluid-typography/#comments-fluid-typography
 
 [1PX]: {{ F_o.img1px__s() }} "Hi Tux!"
