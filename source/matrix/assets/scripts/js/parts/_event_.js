@@ -227,7 +227,7 @@ void function ()
   //XX body_e.classList.add( 'fade_in' )
   //XX body_e.classList.remove( 'fade' )
   ;[ 
-    'service',
+    //... 'service',
     'skin',
     'slots',
     'navigation',
