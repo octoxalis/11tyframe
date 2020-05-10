@@ -4,7 +4,7 @@
   "start_url": "./",
   "scope": "/",
   "description": "11ty Frame blog",
-  "icons": [{ "src": "https://11tyframe.netlify.app/assets/media/apple-touch-icon.png", "sizes": "512x512" }],
+  "icons": [{ "src": "https://11tyframe.netlify.app/assets/media/google-touch-icon.png", "sizes": "512x512" }],
   "theme_color":"#064ec1",
   "background_color":"#ffffff",
   "display":"standalone"
