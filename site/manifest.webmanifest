@@ -1,8 +1,7 @@
 {
   "name":"11tyframe",
   "short_name":"11tyframe",
-  "start_url": "/?source=pwa",
-  "scope": "/",
+  "start_url": "https://11tyframe.netlify.app/",
   "description": "11ty Frame blog",
   "icons": [{ "src": "google-touch-icon.png", "sizes": "512x512" }],
   "theme_color":"#064ec1",
