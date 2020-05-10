@@ -19,8 +19,7 @@
 
 {% include "./parts/perf_api/helpers/iFrameHolder.js" %}
 {% include "./parts/perf_api/init.js" %}
-
 {% endset %}
 {% if U_o.dev_b === true %}{{ _js | safe }}
-{% else %}{{ _js | minify_js | safe }}
+{% else %}{{- _js | minify_js | safe -}}
 {% endif %}

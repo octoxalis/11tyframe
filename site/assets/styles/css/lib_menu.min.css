@@ -1,2 +1,1 @@
-
 [data--=menu]{top:calc(var(--HEADER_HEIGHT) + 4px);left:var(--BODY_MARGIN)}[data--=menu_order]::after{content:'⇅'}[data--=menu_item]{display:flex;margin:0}[data--=menu_item] span:nth-of-type(3){padding-left:2em;font-style:italic}

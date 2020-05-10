@@ -9,5 +9,5 @@
 {% include "./parts/_event_.js" %}
 {% endset %}
 {% if U_o.dev_b === true %}{{ _js | safe }}
-{% else %}{{ _js | minify_js | safe }}
+{% else %}{{- _js | minify_js | safe -}}
 {% endif %}

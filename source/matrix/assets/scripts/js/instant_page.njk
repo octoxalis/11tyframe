@@ -2,5 +2,5 @@
 {% include "./parts/_instant_page_.js" %}
 {% endset %}
 {% if U_o.dev_b === true %}{{ _js | safe }}
-{% else %}{{ _js | minify_js | safe }}
+{% else %}{{- _js | minify_js | safe -}}
 {% endif %}
