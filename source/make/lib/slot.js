@@ -1,4 +1,4 @@
-const fs = require('fs-extra')
+const fs  = require('fs-extra')
 const U_o = require( '../../matter/assets/scripts/js/lib/U_o.js' )
 const C_o = require( '../../matter/assets/scripts/js/lib/C_o.js' )
 
@@ -63,8 +63,7 @@ const save__v =
     const body_s = slot_s.replace( C_o.SLOT_OPEN_s, `<div data-slot=${at_n}>` ).replace( C_o.SLOT_CLOSE_s, `<div>` )
     const file_s = permalink_s.replace( '.', `_${at_n}.` )
     const path_s = `../site/${file_s}`
-    fs.outputFile( path_s, body_s,
-      error_o => console.log( `-- Writing ${path_s} from ./matter/pages/${name_s}.md: ${error_o}` ) )
+    fs.outputFile( path_s, body_s, out_o => console.log( `-- Writing ${path_s} from ./matter/pages/${name_s}.md: ${out_o}` ) )
     ++at_n
   }
 }

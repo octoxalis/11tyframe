@@ -5,8 +5,9 @@
 
 <script>window.parent.DOM_o.enableScript__v('prism_js', true )</script>
 
-<p>If you want to have comments on some or all of your blog pages, you have to configure 11ty Frame commenting system: <a href="https://github.com/utterance/utterances" target="_blank" rel="noreferrer noopener">utteranc.es</a>. All you have to do is to follow utterances site <a href="https://utteranc.es" target="_blank" rel="noreferrer noopener">instructions</a>.</p>
-<p>If you don’t want to have comments on any page, just add a property <code>no_comments</code> in its frontmatter section: here is what this <code>install</code> page source does, just <em>commenting out</em> (sic) the <code>no_comments</code> property.</p>
+<p>If you want to have comments on some or all of your blog pages, you have to configure 11ty Frame your commenting system: each page where comments are useful must be paired with a Github issue which you have to create as soon as the page is published.
+A simple convention is to give the “comment” issue the same title as your page file name.</p>
+<p>The issue number in your Github repository related to your page has to be declared in its front matter with the property <code>gh_issue_n</code>.</p>
 <hgroup data--="code_ref">
 <h5><a href="https://github.com/octoxalis/11tyframe/blob/master/source/matter/pages/install.md" target="_blank">11tyframe/source/matter/pages/install.md</a></h5>
 <h6><a href="https://prismjs.com" target="_blank" title="Highlighting provided by Prism.js">Prism</a></h6>
@@ -16,16 +17,15 @@
 {
   date:      `2019-11-01`,
   layout:    `frame.njk`,
-  permalink: `install.html`,
+  permalink: `posts/install.html`,
   tags:      [ `post` ],
-<br/>
   eleventyExcludeFromCollections: false,
-  no_comments: true,    //: there will be no comments for this page!
-<br/>
+  rank_n:     1,
   title_s:    `Install 11ty Frame`,
   subtitle_s: `How to install your 11ty Frame blog`,
   abstract_s: `Follow these instructions`,
   author_s:   `Me`,
+  gh_issue_n: 2,
 }
 ---
 <br/>

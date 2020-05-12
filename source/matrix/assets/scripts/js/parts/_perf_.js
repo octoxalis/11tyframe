@@ -13,7 +13,7 @@ PERF_o.init__v = () =>
   {
     const link_e = document.createElement( 'link' )
     link_e.rel = 'stylesheet'
-    link_e.href = '{{U_o.url_s}}assets/styles/css/lib_performance.min.css'
+    link_e.href = '{{U_o.url_s}}assets/styles/css/performance.min.css'
     perf_e.appendChild( link_e )
 
     const script_e = document.createElement( 'script' )

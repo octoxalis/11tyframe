@@ -13,8 +13,7 @@
   abstract_s: `Easily change colors and luminosity mode (light or dark)`,
   author_s:   `Me`,
 
-  //XX no_comment: true,
-  sitemap_b: true,
+  gh_issue_n: 3,
 }
 ---
 [comment]: # (======== Post ========)

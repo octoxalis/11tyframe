@@ -19,6 +19,7 @@ h1,
 [data--="page_intro"],
 [data--="perf_header"],
 [data--="comment_header"],
+[data--="gh_issue"] > p,
 [data--="link_title"],
 [data--="link_abstract"]    {display: grid; place-items: center}
 
@@ -46,7 +47,6 @@ footer,
 
 
 a,
-.utterances-frame,
 /*[data--=count_txt],*/
 [data--="ulist"] > li::before,
 [data--="important"]::before    {position:relative}
@@ -79,6 +79,7 @@ main    {margin:var(--PAD_8) 0}
 
 
 h2[data-slot]    {margin:var(--PAD_4) 0; padding: var(--PAD_1) var(--PAD_2) var(--PAD_1) var(--PAD_16)}
+
 h2[data-slot]:first-of-type    {margin-top:var(--PAD_16)}
 
 
@@ -99,10 +100,14 @@ blockquote *:last-child    {margin-bottom: 0}
 
 main,
 h2[data-slot],
-[data--="menu"]    {border-radius:.5em}
+[data--="gh_issue_title"],
+[data--="menu"],
+.note_open    {border-radius:.5em}
 
 [data--="perf_header"],
-[data--="comment_header"]    {margin-top:var(--PAD_4)}
+[data--="comment_header"]    {margin:var(--PAD_4) 0}
+
+[data--="gh_issue_title"]    {padding:0 var(--PAD_8)}
 
 
 /*--------- WIDTH/HEIGHT ------*/
@@ -115,7 +120,6 @@ nav,
 
 [data--="article"],
 [data--="comment_header"],
-[data--="comment"],
 [data--="menu"]    {width: var(--BODY_WIDTH)}
 
 [data--="example"]    {max-width:100%}
@@ -136,7 +140,8 @@ header    {height: var(--HEADER_HEIGHT)}
 
 [data--="comment_header"]    {min-height:3em}    /* > --svg_icon_dim */
 
-h2[data-slot]    {height:auto}
+h2[data-slot],
+[data--="gh_issue_title"]   {height:auto}
 
 footer    {top:97vh}
 
@@ -153,13 +158,14 @@ button[data--^="link_"]    {--svg_icon_dim:1.6em}
 /*--------- BACKGROUND ------*/
 
 
-*                       {background-color: transparent;}
+*                         {background-color: transparent;}
 
 main,
-h2[data-slot]           {background-color:var(--c_back_hi)}
+h2[data-slot],
+[data--="gh_issue_title"] {background-color:var(--c_back_hi)}
        
 body,
-.note_open              {background-color:var(--c_back)}
+.note_open                {background-color:var(--c_back)}
 
 header,
 [data--="menu"]           {background-color:var(--c_back_op)}
@@ -230,7 +236,7 @@ header    {box-shadow:var(--BOX_SHADOW)}
 
 [data--="ulist"]
 {
-  margin: .5rem 0 1rem 1rem;
+  margin: .5rem 0 0 1rem;
   padding-left: 0;
 }
 

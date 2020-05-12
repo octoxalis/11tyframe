@@ -3,11 +3,11 @@
 {% include "./parts/_service_.js" %}
 {% include "./parts/_idb_.js" %}
 {% include "./parts/_skin_.js" %}
-{% include "./parts/_comment_.js" %}
+{#% include "./parts/_comment_.js" %#}
 {% include "./parts/_perf_.js" %}
 {#% include "./parts/_idler_.js" %#}
 {% include "./parts/_event_.js" %}
 {% endset %}
-{% if U_o.dev_b === true %}{{ _js | safe }}
+{% if U_o.dev_b === true %}{{- _js | safe -}}
 {% else %}{{- _js | minify_js | safe -}}
 {% endif %}

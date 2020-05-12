@@ -14,9 +14,7 @@
 h1                 {--size_ratio: 1.7}
 h2                 {--size_ratio: 1.4}
 h3                 {--size_ratio: 1.2}
-.note_open,
-.note_open a,
-.note_open code,
+.note_open         {--size_ratio: .85}
 [data--^=link_]    {--size_ratio: .85}
 [data--=band_title]:hover::after,
 small              {--size_ratio: .8}

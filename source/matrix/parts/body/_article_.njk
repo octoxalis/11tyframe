@@ -2,9 +2,7 @@
   <article data--="article">
   {{ layoutContent | safe }}
 {% include "parts/body/_slots_url_.njk" %}
-{% if no_comment !== true %}
-{% include "parts/body/_comment_.njk" %}
-{% endif %}
+{% if gh_issue_n > 0 %}{% include "parts/body/_comment_.njk" %}{% endif %}
   </article>
 </main>
 {% include "parts/body/_performance_.njk" %}

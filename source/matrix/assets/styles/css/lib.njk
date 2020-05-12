@@ -3,6 +3,6 @@
 {% include "./parts/_ui_.css" %}
 {% include "./parts/_note_.css" %}
 {% endset %}
-{% if U_o.dev_b === true %}{{ _css | safe }}
+{% if U_o.dev_b === true %}{{- _css | safe -}}
 {% else %}{{- _css | minify_css | safe -}}
 {% endif %}

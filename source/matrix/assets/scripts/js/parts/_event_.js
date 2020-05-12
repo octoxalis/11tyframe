@@ -8,6 +8,7 @@ EVENT_o.init_o =
 }
 
 
+
 /**
  * Register Service worker
  */
@@ -203,7 +204,9 @@ EVENT_o.comment__v =
 () =>
 {
   const switch_e = document.querySelector( '[data--="comment_visibility"]' )
-  if ( switch_e ) switch_e.addEventListener('click', click_o => COMMENT_o.init__v() )
+  if ( switch_e ) switch_e.addEventListener('click',
+    click_o =>
+    document.querySelector( '[data--="gh_issue"]' ).classList.toggle( 'retract' ) )
 }
 
 
@@ -227,7 +230,7 @@ void function ()
   //XX body_e.classList.add( 'fade_in' )
   //XX body_e.classList.remove( 'fade' )
   ;[ 
-    //... 'service',
+    'service',
     'skin',
     'slots',
     'navigation',

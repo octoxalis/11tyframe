@@ -12,8 +12,7 @@ SERVICE_o.init__v = url_s =>
   //-- const SUCCESS_s = 'successful'
   const FAILURE_s = 'failed'
   
-  //XX navigator.serviceWorker.register( url_s, {scope: '../../../'} )  //: up to site root
   navigator.serviceWorker.register( url_s )
-  .then( null,    //-- .then( registration => console.log(  `${REGISTRATION_s} ${SUCCESS_s} [scope: ${registration.scope}]` ),
-         error_o => console.log( `${REGISTRATION_s} ${FAILURE_s} [error: ${error_o}]` ) )
+    .then( null,    //-- .then( registration => console.log(  `${REGISTRATION_s} ${SUCCESS_s} [scope: ${registration.scope}]` ),
+      error_o => console.log( `${REGISTRATION_s} ${FAILURE_s} [error: ${error_o}]` ) )
 }

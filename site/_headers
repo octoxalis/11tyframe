@@ -1,9 +1,9 @@
 /*
 Accept-Charset: utf-8
-Expires: Thu Jul 09 2020 15:44:27 GMT+0200 (Central European Summer Time)
 Content-Security-Policy: frame-ancestors 'self';base-uri https://11tyframe.netlify.app/;
 X-Frame-Options: SAMEORIGIN
 X-Content-Type-Options: nosniff
 Referrer-Policy: same-origin
 Feature-Policy: fullscreen 'self';midi 'self';notifications 'self';push 'self';sync-xhr 'self';microphone 'self';camera 'self';magnetometer 'self';gyroscope 'self';speaker 'self';vibrate 'self';
 Timing-Allow-Origin: "https://11tyframe.netlify.app/"
+Expires: Sat Jul 11 2020 18:49:11 GMT+0200 (Central European Summer Time)

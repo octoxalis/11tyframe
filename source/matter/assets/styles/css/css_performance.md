@@ -1,6 +1,6 @@
 ---js
 {
-  layout:    `assets/styles/css/lib_performance.njk`,
-  permalink: `assets/styles/css/lib_performance.min.css`,
+  layout:    `assets/styles/css/performance.njk`,
+  permalink: `assets/styles/css/performance.min.css`,
 }
 ---

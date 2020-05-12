@@ -13,8 +13,7 @@
   abstract_s: `Follow these instructions`,
   author_s:   `Me`,
 
-  //XX no_comment: true,
-  sitemap_b: true,
+  gh_issue_n: 2,
 }
 ---
 [comment]: # (======== Post ========)
@@ -138,10 +137,10 @@ probably replacing the `index.md` and `install.md` files in the `matter/pages` d
 <slot-css lib_prism/>
 <slot-js prism_js/>
 
-If you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} commenting system: [utteranc.es]{{U_o.OUTLINK_s}}. All you have to do is to follow utterances site [instructions]{{U_o.OUTLINK_s}}.
+If you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} your commenting system: each page where comments are useful must be paired with a Github issue which you have to create as soon as the page is published.
+A simple convention is to give the "comment" issue the same title as your page file name.
 
-
-If you don't want to have comments on any page, just add a property `no_comments` in its frontmatter section: here is what this `install` page source does, just _commenting out_ (sic) the `no_comments` property.
+The issue number in your Github repository related to your page has to be declared in its front matter with the property `gh_issue_n`.
 
 
 {% _code_block %}
@@ -153,16 +152,15 @@ If you don't want to have comments on any page, just add a property `no_comments
 {
   date:      `2019-11-01`,
   layout:    `frame.njk`,
-  permalink: `install.html`,
+  permalink: `posts/install.html`,
   tags:      [ `post` ],
-
   eleventyExcludeFromCollections: false,
-  no_comments: true,    //: there will be no comments for this page!
-
+  rank_n:     1,
   title_s:    `Install 11ty Frame`,
   subtitle_s: `How to install your 11ty Frame blog`,
   abstract_s: `Follow these instructions`,
   author_s:   `Me`,
+  gh_issue_n: 2,
 }
 ---
 {% endraw %}
@@ -217,6 +215,4 @@ and give it the name of your Github repository.
 [Eleventy]: https://github.com/11ty/eleventy/
 [repository]: https://github.com/octoxalis/11tyframe
 [11tyTips]: https://11tytips.netlify.com
-[utteranc.es]: https://github.com/utterance/utterances
-[instructions]: https://utteranc.es
 [page]: https://www.netlify.com

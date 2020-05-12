@@ -15,20 +15,19 @@ const U_o =
 
   GIT_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/`,
   GIT_SRC_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/blob/master/`,
-  GIT_ISSUES_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/issues`,
+  GIT_ISSUES_s: `https://github.com/${A_o.AUTHOR_s}/${A_o.ID_s}/issues/`,
   //xx TWI_s: `https://twitter.com/${A_o.ID_s}/`,
   //XX RSS_s: `${A_o.URL_s}feed.xml`,
-  //XX SERVICE_PATH_s: 'assets/scripts/js/service_worker.min.js',
   SERVICE_PATH_s: 'service_worker.min.js',
 
   HOME_s:    `[Home page]: ${A_o.URL_s}`,
-  COMMENT_s: `[utteranc.es]: https://github.com/utterance/utterances`,
+  //XXCOMMENT_s: `[utteranc.es]: https://github.com/utterance/utterances`,
+
   NETLIFY_s: `https://www.netlify.com`,
   NODE_s :   `[Node.js]: https://nodejs.org`,
 
   //--OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',
-  OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',    //: --> Referrer-Policy header
-
+  OUTLINK_s: '{target="_blank"}',    //: --> Referrer-Policy header
 
 }
 

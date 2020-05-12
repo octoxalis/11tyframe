@@ -1,6 +1,6 @@
 ---js
 {
-  layout:    `assets/styles/css/lib_table.njk`,
-  permalink: `assets/styles/css/lib_table.min.css`,
+  layout:    `assets/styles/css/table.njk`,
+  permalink: `assets/styles/css/table.min.css`,
 }
 ---

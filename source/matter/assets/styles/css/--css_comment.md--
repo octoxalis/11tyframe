@@ -1,0 +1,6 @@
+---js
+{
+  layout:    `assets/styles/css/comment.njk`,
+  permalink: `assets/styles/css/comment.min.css`,
+}
+---

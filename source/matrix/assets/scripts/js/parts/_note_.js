@@ -60,7 +60,7 @@ NOTE_o.act_o =
 
 void function ()
 {
-  if ( EVENT_o.init_o.note_b ) return    //: already init
+  if ( EVENT_o.init_o.note_b ) return    //: already init in a previous slot
   //>
   document.querySelector( '[data--="article"]' )
     .addEventListener('click', NOTE_o.text__v )

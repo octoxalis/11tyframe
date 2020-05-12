@@ -3,7 +3,7 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:ca="http://corsa.netlify.app/schemas/ca_schema">
 {%- for _post_o in collections.all %}
-{% if _post_o.data.sitemap === true %}
+{% if _post_o.data.no_sitemap_b !== true %}
   <url>
     <loc>{{ U_o.url_s + _post_o.data.permalink }}</loc>
     <lastmod>{{ _post_o.data.date }}</lastmod>

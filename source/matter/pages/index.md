@@ -11,8 +11,7 @@
   abstract_s: `A blog powered by Eleventy`,
   author_s:   `Me`,
 
-  //XX no_comment: true,
-  sitemap_b: true,
+  gh_issue_n: 1,
 }
 ---
 [comment]: # (======== Post ========)
@@ -67,7 +66,7 @@ see [CoRsa site]{{U_o.OUTLINK_s}}
 {% end_note_img %}
 
 + Full Markdown content, styling, linking, etc.
-+ Smart [utteranc.es]{{U_o.OUTLINK_s}} commenting system using your own Github repository issues
++ Simple commenting system redirecting to your own Github repository issues
 + Extensive **Performance API** metrics report for loading process optimisation
 {% _note_txt %}
 try it by a clicking the [bottom page icon](#perf_header)!
@@ -93,7 +92,6 @@ _That's all Folks!_
 [CoRsa site]:  https://corsa.netlify.app
 [Eleventy]:    https://11ty.io
 [zero-config]: https://www.11ty.io/docs/resources/#zero-config
-[utteranc.es]: https://github.com/utterance/utterances
 [Node.js]:     https://nodejs.org
 [Prism]:       https://prismjs.com
 

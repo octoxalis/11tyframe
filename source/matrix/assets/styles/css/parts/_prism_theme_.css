@@ -32,7 +32,7 @@ pre[class*=language-],
 [data--=note_content] code
 {
   font-family: var(--font_mono);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 code[class*=language-],
@@ -53,10 +53,11 @@ pre[class*=language-]
 [data--=note_content] code,
 p > code
 {
-  --size_ratio: .9;
+  --size_ratio: .8;
 
-  padding: 0 var(--PAD_1);
-  background: var(--c_back);
+  color: hsla( var(--c_hue_p), var(--c_sat_lo), var(--c_lum_lo), 1 );
+	background: hsla( var(--c_hue_p), var(--c_sat_lo), var(--c_lum_hi), .5 );
+  border-radius: 4px;
 }
 
 

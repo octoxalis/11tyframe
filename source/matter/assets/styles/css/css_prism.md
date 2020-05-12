@@ -1,6 +1,6 @@
 ---js
 {
-  layout:    `assets/styles/css/lib_prism.njk`,
-  permalink: `assets/styles/css/lib_prism.min.css`,
+  layout:    `assets/styles/css/prism_ui.njk`,
+  permalink: `assets/styles/css/prism_ui.min.css`,
 }
 ---

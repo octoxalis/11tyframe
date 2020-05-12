@@ -1,9 +1,3 @@
-/**
- * Unlike most Service Workers, this one always attempts to download assets from the network.
- * Only when network access fails do we fallback to using the cache. 
- * When a request succeeds we always update the cache with the new version.
- * If a request fails and the result isn't in the cache then we display an offline page.
- */
 var S_WORKER_o = Object.create( null )
 
 
@@ -16,9 +10,15 @@ S_WORKER_o.URL_a = //: URLs of assets to immediately cache
   '{{U_o.url_s}}',
   '{{U_o.url_s}}index.html',
   '{{U_o.url_s}}offline.html',
+  '{{U_o.url_s}}menu.html',
+
   '{{U_o.url_s}}service_worker.min.js',
   '{{U_o.url_s}}assets/scripts/js/lib.min.js',
+  '{{U_o.url_s}}assets/scripts/js/menu.min.js',
+
   '{{U_o.url_s}}assets/styles/css/lib.min.css',
+  '{{U_o.url_s}}assets/styles/css/menu.min.css',
+
   '{{U_o.url_s}}favicon.ico',
 ]
 
@@ -29,11 +29,15 @@ S_WORKER_o.URL_a = //: URLs of assets to immediately cache
  */
 S_WORKER_o.install__v = install_o =>
 {
-  install_o.waitUntil( caches.open( S_WORKER_o.CACHE_s )
-    .then( cache_o => cache_o.addAll( S_WORKER_o.URL_a  ) )
-    .then( self.skipWaiting() ) )
+  install_o.waitUntil(
+    void async function ()
+    {
+      const cache_o = await caches.open( S_WORKER_o.CACHE_s )
+      await cache_o.addAll( S_WORKER_o.URL_a  )
+      self.skipWaiting()
+    } ()
+  )
 }
-
 
 
 /**
@@ -41,56 +45,54 @@ S_WORKER_o.install__v = install_o =>
  */
 S_WORKER_o.activate__v = activate_o =>
 {
-  activate_o.waitUntil( caches.keys()
-    .then( entry_a => entry_a.filter( entry_s => entry_s !== S_WORKER_o.CACHE_s ) )
-    .then( remove_a => Promise.all( remove_a.map( remove_s => caches.delete( remove_s ) ) ) )
-    .then( () => self.clients.claim() ) )
-}
-
-
-
-/**
- * Always try to download from server first
- */
-S_WORKER_o.fetch__v = fetch_o =>
-{
-  fetch_o.respondWith( fetch( fetch_o.request )
-      .then( response_o =>
-      {
-        cache__v( fetch_o.request, response_o )   //: download is successful: cache the result...
-        return response_o.clone()                 //... and display it
-      } )
-      .catch( error_o => S_WORKER_o.cache__o( error_o ) )    //: error_o means network fail (offline...)
+  activate_o.waitUntil(
+    void async function ()
+    {
+      const entry_a = await caches.keys()
+      const remove_a = await entry_a.filter( entry_s => entry_s !== S_WORKER_o.CACHE_s )
+      await Promise.all( remove_a.map( remove_s => caches.delete( remove_s ) ) )
+      self.clients.claim()
+    } ()
   )
 }
 
 
 
-
 /**
- * Try to fetch a cache version if network access issues
+ * Fetch offline-1st
+ * https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading
  */
-S_WORKER_o.cache__o = fetch_o =>
+
+S_WORKER_o.fetch__v = fetch_o =>
 {
-  return caches.match( fetch_o.request )
-    .then( response_o =>
+  if ( fetch_o.request.mode === 'navigate' )
+  {
+    try
     {
-      return response_o ||        //: We have a cached version, display it
-        caches.open( S_WORKER_o.CACHE_s )    //: We don't have a cached version, display offline page
-          .then( cache_o => cache_o.match( new Request( `{{U_o.url_s}}offline.html` ) ) )
-    } )
+      fetch_o.respondWith(
+        async function()
+        {
+          const url_c = new URL( fetch_o.request.url )
+          url_c.search = ''
+          const response_o = fetch( url_c )
+          const clone_o = response_o.then( resp_o => resp_o.clone() )
+          fetch_o.waitUntil(
+            async function()
+            {
+              const cache_o = await caches.open( S_WORKER_o.CACHE_s )
+              await cache_o.put( url_c, await clone_o )
+            }() )
+          return ( await caches.match( url_c ) ) || response_o
+        } () )
+    }
+    catch ( error_o )
+    {
+      const cache_o = caches.open( S_WORKER_o.CACHE_s )
+      return cache_o && cache_o.match( new Request( `{{U_o.url_s}}offline.html` ) )  //: We don't have a cached version, display offline page
+    }
+  }
 }
 
-
-
-/**
- * Put successful Fetch in cache
- */
-S_WORKER_o.cache__v = ( request_o, response_o ) =>
-{
-  caches.open( S_WORKER_o.CACHE_s )
-    .then( cache_o => cache_o.put( request_o, response_o ) )
-}
 
 
 /**
@@ -98,5 +100,5 @@ S_WORKER_o.cache__v = ( request_o, response_o ) =>
  */
 ; [ 'install',
     'activate',
-    'fetch'
+    'fetch',
   ].forEach( action_s => self.addEventListener( action_s, action_o => S_WORKER_o[`${action_s}__v`]( action_o ) ) )
