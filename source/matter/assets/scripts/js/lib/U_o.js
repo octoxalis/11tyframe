@@ -21,13 +21,12 @@ const U_o =
   SERVICE_PATH_s: 'service_worker.min.js',
 
   HOME_s:    `[Home page]: ${A_o.URL_s}`,
-  //XXCOMMENT_s: `[utteranc.es]: https://github.com/utterance/utterances`,
 
   NETLIFY_s: `https://www.netlify.com`,
   NODE_s :   `[Node.js]: https://nodejs.org`,
 
-  //--OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',
-  OUTLINK_s: '{target="_blank"}',    //: --> Referrer-Policy header
+  OUTLINK_s: '{target="_blank" rel="noreferrer noopener"}',
+  //??? OUTLINK_s: '{target="_blank"}',    //: --> Referrer-Policy header
 
 }
 
