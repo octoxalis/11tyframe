@@ -50,7 +50,7 @@ see [CoRsa site]{{U_o.OUTLINK_s}}
 
 + Very high speed loading
 {% _note_img [ 'Lighthouse report', 'Lighthouse report' ] %}
-![Lighthouse report][1PX]{data-isrc="{{U_o.url_s}}assets/media/screenshots/lighthouse-2020-05-11@09-14-22.png" data-size="100%"}
+![Lighthouse report][1PX]{data-isrc="{{U_o.url_s}}assets/media/screenshots/lighthouse-2020-05-11@09-14-22.webp" data-size="100%"}
 {% end_note_img %}
 
 + Clean UI with:
