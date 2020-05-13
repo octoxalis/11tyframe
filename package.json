@@ -1,0 +1,30 @@
+{
+  "name": "11tyframe",
+  "version": "1.0.0",
+  "description": "11ty Frame",
+  "main": "source/make/11ty/make.js",
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "clean-css": "^4.2.1",
+    "uglify-es": "^3.3.9",
+    "klaw-sync": "^6.0.0",
+    "markdown-it": "^9.1.0",
+    "markdown-it-attrs": "^3.0.1",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-include": "^1.1.0",
+    "markdown-it-link-attributes": "^2.1.0",
+    "nunjucks": "^3.2.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "luxon": "^1.17.2"
+  },
+  "scripts": {
+    "test": "eleventy --help"
+  },
+  "keywords": [
+    "site"
+  ],
+  "author": "__AUTHOR__",
+  "license": "MIT"
+}
