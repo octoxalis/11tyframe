@@ -27,7 +27,7 @@ You are just a few lines away from your blog.{ data--="page_intro" }
 
 <slot-slice>
 <slot-css prism_css/>
-<slot-css lib_prism/>
+<slot-css prism_ui/>
 <slot-js prism_js/>
 
 Your first action to create a {{A_o.NAME_s}} site is to fork {{A_o.ID_s}} [repository] inside the directory where you want to develop your new site
@@ -72,7 +72,7 @@ Install [Eleventy] and the required Node packages locally, as they appear in you
 
 <slot-slice>
 <slot-css prism_css/>
-<slot-css lib_prism/>
+<slot-css prism_ui/>
 <slot-js prism_js/>
 
 Once installed and deployed
@@ -134,7 +134,7 @@ probably replacing the `index.md` and `install.md` files in the `matter/pages` d
 
 <slot-slice>
 <slot-css prism_css/>
-<slot-css lib_prism/>
+<slot-css prism_ui/>
 <slot-js prism_js/>
 
 If you want to have comments on some or all of your blog pages, you have to configure {{A_o.NAME_s}} your commenting system: each page where comments are useful must be paired with a Github issue which you have to create as soon as the page is published.

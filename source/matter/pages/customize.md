@@ -27,7 +27,7 @@ Some options let you modify the skin of your blog.{ data--="page_intro" }
 
 <slot-slice>
 <slot-css prism_css/>
-<slot-css lib_prism/>
+<slot-css prism_ui/>
 <slot-js prism_js/>
 
 At the root of the source directory there is a `configure.js` file that you can tweak as you see fit.
