@@ -1,6 +1,6 @@
 const SLOT_o = require( './slot.js' )
 const EXPIRES_o = require( './expires.js' )
-//?? const HEADER_o = require( './header.js' )
+//... const KV_SLOT_o = require( './kv_slot.js' )
 
 let files_a   = null
 let count_n   = 0
@@ -54,7 +54,7 @@ const templateEnd__s = ( input_s, data_o ) =>
 
 const headEnd__s = ( input_s, data_o ) =>
 {
-  //... HEADER_o.insertJS__s( HEADER_o.insertCSS__s( input_s, data_o ), data_o )
+  //... let end_s = KV_SLOT_o.js__s( KV_SLOT_o.css__s( input_s, `key=value:key=value CSS` ), `key=value:key=value JS`)    //... compute from content_s + data_o
   let end_s = input_s
   //... what else?
   return end_s

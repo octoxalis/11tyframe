@@ -13,14 +13,6 @@
   text-decoration: none;
 }
 
-.note_open img
-{
-  position: relative;
-  width: 100%;  /* can be overriden by inline style */
-  object-fit: scale-down;
-  object-position: left top;
-}
-
 [data--="note_content"]
 {
   overflow: hidden;
@@ -30,6 +22,40 @@
   width: 0;
   height: 0;
   pointer-events: none;
+}
+
+[data--="note_content"].note_open
+{
+  display: block;
+  min-width: var(--line_width);
+}
+
+.note_open    /* after [data--=note_content] */
+{
+  padding: var(--PAD_1); /*var(--PAD_2);*/
+  height: auto;
+  border-left: var(--PAD_2) solid var(--c_back_op);
+  transition: all 0.25s ease;
+}
+
+[data--="note_img"] .note_open
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  left: calc( var(--PAD_8) * -1 );  /* div[data-slot] padding compensation */
+  margin:  0;
+  border-left: none;
+  background: transparent;
+}
+
+.note_open img
+{
+  position: relative;
+  width: 100%;  /* can be overriden by inline style */
+  object-fit: scale-down;
+  object-position: left top;
 }
 
 [data--^="note_"] > sup
@@ -89,26 +115,6 @@
 [data--="note_content"] cite::after
 {
   content: '\00bb';
-}
-
-.note_open    /* after [data--=note_content] */
-{
-  padding: var(--PAD_1); /*var(--PAD_2);*/
-  width: auto;
-  height: auto;
-  border-left: var(--PAD_2) solid var(--c_back_op);
-  transition: all 0.25s ease;
-}
-[data--="note_img"] .note_open
-{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  left: calc( var(--PAD_8) * -1 );  /* div[data-slot] padding compensation */
-  margin:  0;
-  border-left: none;
-  background: transparent;
 }
 
 .note_link_a

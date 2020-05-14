@@ -1,6 +1,6 @@
 /*--------- DISPLAY ------*/
 
-.note_open,
+/*??? .note_open,*/
 [data--="example"]::before    {display:block}
 
 
@@ -47,6 +47,7 @@ footer,
 
 
 a,
+.utterances-frame,
 /*[data--=count_txt],*/
 [data--="ulist"] > li::before,
 [data--="important"]::before    {position:relative}
@@ -123,7 +124,6 @@ nav,
 [data--="menu"]    {width: var(--BODY_WIDTH)}
 
 [data--="example"]    {max-width:100%}
-
 
 div[data-slot] > p,
 div[data-slot] > footer,

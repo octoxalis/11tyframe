@@ -1,5 +1,5 @@
 {% set _css %}
-{% include "./parts/_prism_theme_.css" %}
+{% include "./parts/_prism_ui_.css" %}
 {% endset %}
 {% if U_o.dev_b === true %}{{ _css | safe }}
 {% else %}{{- _css | minify_css | safe -}}

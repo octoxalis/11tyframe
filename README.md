@@ -2,7 +2,11 @@
 
 A light site frame using [Eleventy](https://11ty.dev) static site generator.
 
-Have a look at [11tyTips](https://11tytips.netlify.com) for an overview of the making of this site.
+Have a look at [11tyTips](https://11tytips.netlify.app) for an overview of the making of this site.
+
+
+**Change log** (2020-05-13): The site has been redesigned to apply my new Content-on-request architecture, as described on the [CoRsa](https://corsa.netlify.app) site, dedicated to this innovative technique.
+
 
 Served by [Netlify](https://netlify.com).
 
